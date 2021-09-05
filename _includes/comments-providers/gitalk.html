@@ -21,7 +21,8 @@
 	{%- endfor -%}
 	{%- assign _last = _admin | size | minus: 1 -%}
 	{%- assign _admin = _admin | slice: 2, _last -%}
-  {%- assign _proxy = _proxy | slice: 2, _last -%}
+
+
 	<script>
 		window.Lazyload.css('{{ _sources.gitalk.css }}');
 		window.Lazyload.js('{{ _sources.gitalk.js }}', function() {
@@ -32,7 +33,7 @@
 				owner: '{{ site.comments.gitalk.owner }}',
 				admin: [{{ _admin }}],
 				id: '{{ page.key }}',
-        proxy: [{{ _proxy }}],
+        
 			});
 			gitalk.render('js-gitalk-container');
 		});
