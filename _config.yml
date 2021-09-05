@@ -133,7 +133,7 @@ comments:
   gitalk:
     enable      : ture
     clientID    : 5e94fa783193e60847dd # GitHub Application Client ID
-    clientSecret: 86db485b4fafc0e415080f82b6d523db5e06e475 # GitHub Application Client Secret
+    clientSecret: 99dde9c0251dfd3ca8f674bd5d4968fe3dc4e1fa # GitHub Application Client Secret
     repository  : leoijeon.github.io # GitHub repo
     owner       : Leoijeon # GitHub repo owner
     admin: Leoijeon # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
