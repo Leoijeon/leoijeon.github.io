@@ -32,7 +32,7 @@
 				owner: '{{ site.comments.gitalk.owner }}',
 				admin: [{{ _admin }}],
 				id: '{{ page.key }}',
-        proxy: '{{ theme.gitalk.proxy }}',
+        proxy: [{{ _proxy }}],
 			});
 			gitalk.render('js-gitalk-container');
 		});
