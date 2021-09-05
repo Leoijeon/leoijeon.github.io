@@ -19,7 +19,7 @@
 theme: jekyll-text-theme
 text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : leoi.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
+url     : leoijeon.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
 title   : Leoi's Personal Site
 description: > # this means to ignore newlines until "Language & timezone"
@@ -56,7 +56,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: Leoijeon/leoi.github.io
+repository: Leoijeon/leoijeon.github.io
 repository_tree: master
 
 
@@ -134,7 +134,7 @@ comments:
     enable      : ture
     clientID    : 5e94fa783193e60847dd # GitHub Application Client ID
     clientSecret: 86db485b4fafc0e415080f82b6d523db5e06e475 # GitHub Application Client Secret
-    repository  : leoi.github.io # GitHub repo
+    repository  : leoijeon.github.io # GitHub repo
     owner       : Leoijeon # GitHub repo owner
     admin: Leoijeon # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
