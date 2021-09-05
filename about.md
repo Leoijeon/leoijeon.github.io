@@ -17,6 +17,5 @@ key: page-about
 
 此站用于记录学习心得，生活片段。
 
-
-
+mail: lvr@mail.ustc.edu.cn
 
