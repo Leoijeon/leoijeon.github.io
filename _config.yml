@@ -144,14 +144,14 @@ comments:
     app_id      : FeHPT0HcxTVG1HcWGiXJNwDl-MdYXbMMI # LeanCloud App id
     app_key     : hPIu6IxQjKiibdeK65pMPFd4 # LeanCloud App key
     placeholder : # Prompt information
-    visitor     : ture # false (default)
+    visitor     : # false (default)
     meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
 
 
 ## => Pageview
 ##############################
 pageview:
-  provider: leancloud # false (default), "leancloud", "custom"
+  provider: false # false (default), "leancloud", "custom"
 
   ## Leancloud
   leancloud:
