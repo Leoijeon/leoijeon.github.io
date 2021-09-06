@@ -120,7 +120,7 @@ sharing:
 ##############################
 comments:
 
-  provider: gitalk # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: valine # false (default), "disqus", "gitalk", "valine", "custom"
 
   ## Disqus
   disqus:
@@ -131,7 +131,6 @@ comments:
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    enable      : ture
     clientID    : 5e94fa783193e60847dd # GitHub Application Client ID
     clientSecret: 99dde9c0251dfd3ca8f674bd5d4968fe3dc4e1fa # GitHub Application Client Secret
     repository  : leoijeon.github.io # GitHub repo
@@ -142,8 +141,8 @@ comments:
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
   valine:
-    app_id      : # LeanCloud App id
-    app_key     : # LeanCloud App key
+    app_id      : tvYs9KVzEegS24mYUrxHNLzd-MdYXbMMI # LeanCloud App id
+    app_key     : UDWJosUMBrPOntBJYp2hOH7x # LeanCloud App key
     placeholder : # Prompt information
     visitor     : # false (default)
     meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
@@ -156,9 +155,9 @@ pageview:
 
   ## Leancloud
   leancloud:
-    app_id    : # LeanCloud App id
-    app_key   : # LeanCloud App key
-    app_class : # LeanCloud App class
+    app_id    : tvYs9KVzEegS24mYUrxHNLzd-MdYXbMMI  # LeanCloud App id
+    app_key   : UDWJosUMBrPOntBJYp2hOH7x # LeanCloud App key
+    app_class : comment # LeanCloud App class
 
 
 ## => Search
