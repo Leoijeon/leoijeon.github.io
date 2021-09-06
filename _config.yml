@@ -141,8 +141,8 @@ comments:
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
   valine:
-    app_id      : tvYs9KVzEegS24mYUrxHNLzd-MdYXbMMI # LeanCloud App id
-    app_key     : UDWJosUMBrPOntBJYp2hOH7x # LeanCloud App key
+    app_id      : FeHPT0HcxTVG1HcWGiXJNwDl-MdYXbMMI # LeanCloud App id
+    app_key     : hPIu6IxQjKiibdeK65pMPFd4 # LeanCloud App key
     placeholder : # Prompt information
     visitor     : ture # false (default)
     meta        : # "[nick, mail, link]" (default) nickname, E-mail, Personal-site
@@ -155,8 +155,8 @@ pageview:
 
   ## Leancloud
   leancloud:
-    app_id    : tvYs9KVzEegS24mYUrxHNLzd-MdYXbMMI # LeanCloud App id
-    app_key   : UDWJosUMBrPOntBJYp2hOH7x # LeanCloud App key
+    app_id    : FeHPT0HcxTVG1HcWGiXJNwDl-MdYXbMMI # LeanCloud App id
+    app_key   : hPIu6IxQjKiibdeK65pMPFd4 # LeanCloud App key
     app_class : pageview # LeanCloud App class
 
 
