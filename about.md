@@ -11,7 +11,7 @@ titles:
 key: page-about
 ---
 
-#![Photo](/assets/about/myself.jpg){:width="400px"}
+
 
 本人凝聚态物理研究生在读，关注拓扑、超导、二维材料。
 
