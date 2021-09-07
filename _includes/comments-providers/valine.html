@@ -14,7 +14,7 @@
 <div id="vcomments"></div>
 
 {%- if _VALINE_VISITOR -%}    
-<span id="{{page.url}}" class="leancloud_visitors" data-flag-title={{page.title}}>
+<span id="{{page.url}}" class="leancloud-visitors" data-flag-title={{page.title}}>
 </span>
 {%- endif -%}
 
@@ -25,6 +25,7 @@
       appId:  '{{ _VALINE_APP_ID }}',
       appKey: '{{ _VALINE_APP_KEY }}',
       verify: true,
+      visitor: true
     };
     {%- if _VALINE_PLACEHOLDER -%}
       _config.placeholder = '{{ _VALINE_PLACEHOLDER }}';
@@ -39,8 +40,7 @@
     {%- if _VALINE_META -%}
       _config.meta = {{ _VALINE_META}};
     {%- endif -%}
-    new Valine({_config,
-               visitor: true});
+    new Valine(_config);
   });
 </script>
 
