@@ -145,13 +145,13 @@ comments:
     app_key     : mKaw1xr57Gx06K2DybeIASg9 # LeanCloud App key
     placeholder : # Prompt information
     visitor     : ture # false (default)
-    meta        : [Nickname, Mail]# "[nick, mail, link]" (default) nickname, E-mail, Personal-site
+    meta        : [Nickname, Mail_or_Wechat]# "[nick, mail, link]" (default) nickname, E-mail, Personal-site
 
 
 ## => Pageview
 ##############################
 pageview:
-  provider: # false (default), "leancloud", "custom"
+  provider: leancloud # false (default), "leancloud", "custom"
 
   ## Leancloud
   leancloud:
