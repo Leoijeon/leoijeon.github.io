@@ -1,11 +1,6 @@
 ---
 layout: article
-titles:
-  # @start locale config
-  en      : &EN       关于
-  zh-Hans : &ZH_HANS  关于
-  zh-Hant : &ZH_HANT  關於
-  zh-TW   : *ZH_HANT
+titles: About|关于
 
   # @end locale config
 key: page-about
