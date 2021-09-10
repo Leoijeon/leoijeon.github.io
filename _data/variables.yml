@@ -38,7 +38,11 @@ default:
     license: false
     pageview: false
     search: default
-
+    
+  header:
+    theme: dark
+    background: 'linear-gradient(135deg, rgb(21, 81, 138), rgb(147, 15, 131))'
+  
 sources:
   bootcdn:
     font_awesome: 'https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.css'
