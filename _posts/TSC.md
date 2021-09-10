@@ -6,9 +6,6 @@ license: true
 toc: true
 key: a20210320
 pageview: true
-header:
-  theme: dark
-  background: 'linear-gradient(135deg, rgb(34, 139, 87), rgb(139, 34, 139))'
 article_header:
   type: overlay
   theme: dark
