@@ -1,7 +1,9 @@
 ---
 layout: article
 titles: About|关于
-
+header:
+  theme: dark
+  background: 'linear-gradient(135deg, rgb(21, 81, 138), rgb(147, 15, 131))'
   # @end locale config
 key: page-about
 ---
