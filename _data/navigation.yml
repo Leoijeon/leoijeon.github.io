@@ -11,5 +11,5 @@ header:
       zh-Hans:  关于
       zh-Hant:  關於
     url:        /about.html
-  theme: dark
-  background: 'linear-gradient(135deg, rgb(21, 81, 138), rgb(147, 15, 131))'
+  - theme: dark
+  - background: 'linear-gradient(135deg, rgb(21, 81, 138), rgb(147, 15, 131))'
