@@ -24,9 +24,6 @@ baseurl : # does not include hostname
 title   : Leoi's Personal Site
 description: > # this means to ignore newlines until "Language & timezone"
   
-header:
-  theme: dark
-  background: 'linear-gradient(135deg, rgb(21, 81, 138), rgb(147, 15, 131))'
 
 ## => Language and Timezone
 ##############################
