@@ -1,0 +1,31 @@
+---
+title:  Wannier90输入文件中num_wann, num_bands, 和energy window等参数设置规则
+tags: wannier DFT
+pageview: true
+layout: article
+license: ture
+toc: ture
+key: a20210923
+header:
+  theme: dark
+  background: 'linear-gradient(135deg, rgb(21, 81, 138), rgb(147, 15, 139))'
+aside:
+    toc: true
+sitemap: true
+mathjax: true
+show_author_profile: ture
+author: 转载
+---
+
+<div id="blog_article" class="d cl"><h1 style="font-size: 32px; font-weight: bold; border-bottom: 2px solid rgb(204, 204, 204); padding: 0px 4px 0px 0px; text-align: left; margin: 0px 0px 10px;">基本规则<br></h1><p>Wannier90是一个构建局域轨道基组的有力工具，一般用来计算紧束缚模型中的占位能和跳跃积分，再结合杂化泛函或GW方法，插值得到更为准确的能带结构，或者计算极化、输运、拓扑不变量等物理性质。在其输入文件中，num_wann、num_bands、projections和energy window是几类极其重要的参数，如果设置不当，容易导致Wannier函数不够局域，计算结果误差很大。对于比较复杂的体系，这些参数的默认值一般不符合要求，需要手动指定。在这里总结一下个人关于如何设定这些参数的经验，欢迎大家批评指正。</p><p><br></p><p><strong>在使用最大局域化Wannier函数(MLWF)理论及Wannier90程序之前，一定要先确定打算拟合哪一部分能带。</strong>拟合全部能带一来非常耗时，二来容易拟合失败。一般来说，如果做能带插值，取费米能级附近几条能带就足够了。如果计算输运、拓扑性质等物理量，可能有额外的判定标准。我没有算过这些性质，不敢妄下结论。</p><p><br></p><p><strong>明确拟合哪一部分能带后，还需要结合fatband或者PDOS，确定这部分能带由哪些单原子态贡献。</strong>在这里以某化合物为例，其原胞中包含28个A原子和1个B原子，最高的价带为第49条能带，最低的导带为第50条能带。通过fatband得知，价带顶和导带底附近的能带主要由A原子的<em>p<sub>z</sub></em>轨道和B原子的<em>d<sub>z</sub><sub>2</sub></em>和<em>d<sub>x2-y2</sub></em>轨道贡献。有了这些信息，便可指定projections了：</p><pre class="brush:plain;toolbar:false;">begin&nbsp;projections
+A:pz
+B:dz2;dx2-y2
+end&nbsp;projections</pre><p><br></p><p>Wannier函数个数为28*1+1*2=30。均分之后，各考虑15条价带和15条导带 <strong>[1]</strong>。为了解纠缠，还需多预留4条价带 <strong>[2]</strong>，因此需要关注第31-64条能带。如果用QE生成波函数，在第二步计算时(calculation="bands")需指定nbnd = 64。如果用VASP生成波函数，非自洽计算时需指定NBANDS = 64。因为我们只关心第31-64条能带，所以需要把第1-30条能带排除。对应参数设置为：</p><pre class="brush:plain;toolbar:false;">num_wann&nbsp;=&nbsp;30
+num_bands&nbsp;=&nbsp;34
+exclude_bands&nbsp;=&nbsp;1-30</pre><p><br></p><p>生成波函数后，通过输出文件或EIGENVAL，<strong>确定各能带能量范围如下（以区间表示，单位为eV，均未作任何平移）</strong>：<img src="http://image.sciencenet.cn/home/201812/29/210115zfupyrdfgfjqyuw1.png" title="" alt="捕获.PNG" original="http://image.sciencenet.cn/home/201812/29/210115zfupyrdfgfjqyuw1.png" style="display: inline;"><br></p><p>第64条能带能量范围为[4.58, 5.31]，第35条能带（对应num_wann下限）能量范围为[-3.70, -3.09]，第31条能带（对应num_bands下限）能量范围为[-4.91, -3.94]。</p><p><br></p><p>解纠缠时涉及两个能量窗口：outer_window和frozen_window。<strong>若不考虑其物理意义，frozen_window取值范围无限制，outer_window内至少包含num_wann条能带。</strong>在此例中，dis_win_min要低于第35条能带能量最小值（-3.70 eV），否则报如下错误：</p><p><img src="http://image.sciencenet.cn/home/201812/29/211022b12zbw3rxvyh7lrg.png" title="" alt="捕获3.PNG" original="http://image.sciencenet.cn/home/201812/29/211022b12zbw3rxvyh7lrg.png" style="display: inline;"><br></p><p><strong>实际上一般将outer_window设置为用exclude_bands排除无关能带后，剩下的能带能量范围，两端再留些余量。</strong>此例中为第31-64条能带，对应参数设置为：</p><pre class="brush:plain;toolbar:false;">dis_win_min&nbsp;=&nbsp;-5.0
+dis_win_max&nbsp;=&nbsp;5.4</pre><p><strong>frozen_window则设定为num_wann对应能带的能量范围，两端留些余量。</strong>此例中为第35-64条能带，对应参数设置为：</p><pre class="brush:plain;toolbar:false;">dis_froz_min&nbsp;=&nbsp;-3.8
+dis_froz_max&nbsp;=&nbsp;5.4</pre><p>如此设置，一般能得到较好的拟合结果。</p><p><br></p><h1 style="font-size: 32px; font-weight: bold; border-bottom: 2px solid rgb(204, 204, 204); padding: 0px 4px 0px 0px; text-align: left; margin: 0px 0px 10px;">补充说明<br></h1><p>[1] 费米能级上下各取15条能带，是根据fatband大概数出来的。取14条价带和16条导带，或18条价带和12条导带均可，不必十分严格。</p><p><br></p><p>[2] 关于什么情况下需要解纠缠，Wannier90的帮助文档和MLWF的理论文献中有十分详细的描述。简单来说，一旦num_wann所指定的能带范围把一组完整的能带一分为二，就需要解纠缠。</p><p><img src="http://image.sciencenet.cn/home/201812/31/165354wger8xd8r8evp468.png" title="" alt="捕获.PNG" original="http://image.sciencenet.cn/home/201812/31/165354wger8xd8r8evp468.png" style="display: inline;"><br></p><p>以上图为例，当num_wann指定的能带范围包含完整的A组和（或）B组价带时，不需要解纠缠。一旦切到了某组价带，或者切到了导带C，就需要解纠缠。实际上，只有在拟合完整的半导体或绝缘体价带时，才不需要解纠缠。对于半导体的导带或金属能带，很难找到一组和其它能带完全分离的能带。这种情况下就需要解纠缠。</p><p><br></p><p>解纠缠需要num_bands &gt; num_wann，即额外预留一部分能带。本例中预留了4条价带，这没有什么严格的标准，预留4条导带或2条价带+2条导带均可，也可预留更多能带。<br></p>                    <br><br>
+                                        <label style="font-size:13px; color:#850f0f">转载本文请联系原作者获取授权，同时请注明本文来自李云海科学网博客。<br>链接地址：</label><a href="http://blog.sciencenet.cn/blog-2909108-1154273.html" target="_blank" style="font-size:13px; color:#850f0f" one-link-mark="yes">http://blog.sciencenet.cn/blog-2909108-1154273.html </a>
+  <br><br><br>                 
+                                        
+</div>
