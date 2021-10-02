@@ -23,8 +23,6 @@ abstract: |
   Superconductor，TSC）是同时有着非对角长程序和非平庸
   拓扑不变量的关联量子态。它们能产生无带隙或零能边界激发，包括容错量子计算所需的
   带有拓扑保护的相位相干的 Majorana 零能模和 Majorana 边界态。
-author:
-- 吕润
 bibliography:
 - bib.bib
 nocite: "[@*]"
