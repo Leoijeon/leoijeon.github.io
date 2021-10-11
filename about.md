@@ -1,6 +1,6 @@
 ---
 layout: article
-comment : false 
+comment : true
 titles: About|关于
 header:
   theme: dark
