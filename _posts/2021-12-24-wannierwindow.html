@@ -1,0 +1,105 @@
+---
+title:  wannier90 输入构造
+tags: Wannier90
+pageview: true
+layout: article
+license: ture
+toc: ture
+key: a20211224
+header:
+  theme: dark
+  background: 'linear-gradient(135deg, rgb(21, 81, 138), rgb(147, 15, 139))'
+aside:
+    toc: true
+sitemap: true
+mathjax: true
+abstract: 
+author: 转载
+---
+<article class="_2rhmJa"><p>构造Wannier90函数的要点 <a href="https://links.jianshu.com/go?to=http%3A%2F%2Fblog.sciencenet.cn%2Fblog-3352196-1071458.html" target="_blank" rel="nofollow" one-link-mark="yes">URL</a></p>
+<p>（以下内容最初来自“材料基因论坛”的Brook斑竹，本人只是内容进行了排版，如有不妥可以联系我进行删帖，具体可以参考帖子<a href="https://links.jianshu.com/go?to=http%3A%2F%2Fbbs.materialsgene.org%2Fforum.php%3Fmod%3Dviewthread%26tid%3D52" target="_blank" rel="nofollow" one-link-mark="yes">URL</a></p>
+<h1>Ⅰ. 构造Wannier函数通常要仔细调节以下三大参数：</h1>
+<ol>
+<li><p>总能带数Num_bands，你需要有足够多的DFT能带数，以至于能够覆盖住你所需要研究的能带以及覆盖你投影子具有投影成分的能带。</p></li>
+<li><p>投影子projector。选择投影子之前，请彻底做一次能带成分分析，也就是画Fatband图。请确认费米面附件的轨道成分，把这些轨道作为投影子。</p></li>
+<li><p>解纠缠窗口和Frozen窗口，参考说明书，多试!</p></li>
+</ol>
+<h1>Ⅱ.  质量判断：</h1>
+<ol>
+<li><p>最初的判断就是对比DFT的能带和Wannier函数插值后的能带。看看会不会相等，如果你看到了一些曲折的条纹，那么说明你的Wannier函数不够局域。</p></li>
+<li>
+<p>建议一开始不做最局域化计算，也就是说设置num_iter=0。检查*.wout文件中Wannier函数的spread。如果Spread太大，比如超过了两个晶格常数。就说明你构造过程中的三大参数没有选好，请好好调节三大参数。</p>
+<ul>
+<li>改变投影子，有时候增加投影子可以使得轨道更加局域；很多人构造wannier函数的时候把core level也加进来，这个实在不是很有必要。</li>
+<li>增大解纠缠的能量空间也会有帮助，有时候你需要关注的投影子在你设置的解纠缠能量空间之外有投影成分，这时候就需要增大解纠缠空间；如果解纠缠空间过于大，也不利于wannier函数的构造。</li>
+<li>慎重调节Frozen窗口，一定要确保这个窗口内除了有投影子的成分外，没有其它轨道的成分。</li>
+</ul>
+</li>
+<li><p>对称性粗略判断，可以通过观察Wannier函数的Spread，粗略地判断轨道是否简并。这个对非磁soc体系比较重要，如果你发现自旋上轨道和自旋下轨道的spread不同，那么就表明你构造的Wannier函数没有时间反演对称性。因此在时间反演的k点没有简并，同时计算出来的Z2拓扑数也会是错的。</p></li>
+</ol>
+<h1>Ⅲ. Tips：</h1>
+<ol>
+<li><p>增加kmesh。增加kmesh的意义在于可以得到更远距离的hopping，对于金属体系比较重要。</p></li>
+<li><p>不要轻易使用num_iter，一旦使用了它，你就没法控制Wannier函数会怎么演化了。</p></li>
+<li><p>对于同一个原子，尽量不要设置两个相同角量子数但是不同主量子数的轨道，比如1s和2s同时。对于金刚石这种三维结构，使用sp3轨道，对于平面的那种，使用sp2轨道。</p></li>
+<li><p>能不能覆盖住所有的能带你需要做能带成分分析，也就是分析能带轨道波函数的投影。对于vasp，在计算能带的INCAR中添加LORBIT=11，分析fat-band。这一步最重要，能帮你确定你所需要设置的能量窗口。</p></li>
+<li><p>dis_froz_min的设置有时候也可以设置小点，这样可以包括更多的能带，以至于收敛更快。但是还是要使用前面所说的原则。</p></li>
+<li><p>建议一开始设置num_iter=0，看看你构造的Wannier函数的spread怎么样。如果spread太大，那就调节这些参数，使得这个spread减小。如果你实在没辙了，那就使用num_iter吧。</p></li>
+</ol>
+<blockquote>
+<p>举个Bi2Se3的例子，从wannier90.wout中截取出来的（只要搜索"Final State"就可以找到）。解释一下数据，括号内的是center，最后一列是spread，也就是WF的展宽。</p>
+</blockquote>
+<div class="_2Uzcx_"><button class="VJbwyy" type="button" aria-label="复制代码"><i aria-label="icon: copy" class="anticon anticon-copy"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="copy" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M832 64H296c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h496v688c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V96c0-17.7-14.3-32-32-32zM704 192H192c-17.7 0-32 14.3-32 32v530.7c0 8.5 3.4 16.6 9.4 22.6l173.3 173.3c2.2 2.2 4.7 4 7.4 5.5v1.9h4.2c3.5 1.3 7.2 2 11 2H704c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32zM350 856.2L263.9 770H350v86.2zM664 888H414V746c0-22.1-17.9-40-40-40H232V264h432v624z"></path></svg></i></button><pre class="line-numbers  language-css"><code class="  language-css">FinalState
+
+ WF centre and spread    1  <span class="token punctuation">(</span>-0.000040<span class="token punctuation">,</span> -1.194745<span class="token punctuation">,</span>  6.638646 <span class="token punctuation">)</span>     3.00135581
+ WF centre and spread    2 <span class="token punctuation">(</span>  0.000038<span class="token punctuation">,</span> -1.196699<span class="token punctuation">,</span>  6.640059 <span class="token punctuation">)</span>    3.05024704
+ WF centre and spread    3  <span class="token punctuation">(</span>-0.000032<span class="token punctuation">,</span> -1.192363<span class="token punctuation">,</span>  6.640243 <span class="token punctuation">)</span>     3.03256302
+ WF centre and spread    4  <span class="token punctuation">(</span>-0.000086<span class="token punctuation">,</span> -3.583414<span class="token punctuation">,</span>  2.908040 <span class="token punctuation">)</span>     3.00131291
+ WF centre and spread    5 <span class="token punctuation">(</span>  0.000047<span class="token punctuation">,</span> -3.581457<span class="token punctuation">,</span>  2.906587 <span class="token punctuation">)</span>    3.05019607
+ WF centre and spread    6  <span class="token punctuation">(</span>-0.000033<span class="token punctuation">,</span> -3.585864<span class="token punctuation">,</span>  2.906443 <span class="token punctuation">)</span>     3.03267256
+ WF centre and spread    7  <span class="token punctuation">(</span>-0.000001<span class="token punctuation">,</span>  1.194527<span class="token punctuation">,</span>  4.773338 <span class="token punctuation">)</span>    2.09798868
+ WF centre and spread    8 <span class="token punctuation">(</span>  0.000003<span class="token punctuation">,</span>  1.194538<span class="token punctuation">,</span> 4.773336 <span class="token punctuation">)</span>     2.05011802
+ WF centre and spread    9  <span class="token punctuation">(</span>-0.000037<span class="token punctuation">,</span>  1.194536<span class="token punctuation">,</span>  4.773327 <span class="token punctuation">)</span>    2.04466361
+ WF centre and spread   10 <span class="token punctuation">(</span>  0.000006<span class="token punctuation">,</span> -1.194384<span class="token punctuation">,</span>  1.130261 <span class="token punctuation">)</span>    2.00572846
+ WF centre and spread   11  <span class="token punctuation">(</span>-0.000018<span class="token punctuation">,</span> -1.216986<span class="token punctuation">,</span>  1.140267 <span class="token punctuation">)</span>     1.96783297
+ WF centre and spread   12 <span class="token punctuation">(</span>  0.000007<span class="token punctuation">,</span> -1.172216<span class="token punctuation">,</span>  1.140684 <span class="token punctuation">)</span>    1.95999088
+ WF centre and spread   13 <span class="token punctuation">(</span>  0.000011<span class="token punctuation">,</span> -3.583770<span class="token punctuation">,</span>  8.416406 <span class="token punctuation">)</span>    2.00573957
+ WF centre and spread   14  <span class="token punctuation">(</span>-0.000002<span class="token punctuation">,</span> -3.561169<span class="token punctuation">,</span>  8.406398 <span class="token punctuation">)</span>     1.96786947
+ WF centre and spread   15  <span class="token punctuation">(</span>-0.000007<span class="token punctuation">,</span> -3.605960<span class="token punctuation">,</span>  8.405979 <span class="token punctuation">)</span>     1.95994538
+ WF centre and spread   16 <span class="token punctuation">(</span>  0.000086<span class="token punctuation">,</span> -1.194737<span class="token punctuation">,</span>  6.638626 <span class="token punctuation">)</span>    3.00130962
+ WF centre and spread   17  <span class="token punctuation">(</span>-0.000047<span class="token punctuation">,</span> -1.196693<span class="token punctuation">,</span>  6.640080 <span class="token punctuation">)</span>     3.05019277
+ WF centre and spread   18 <span class="token punctuation">(</span>  0.000033<span class="token punctuation">,</span> -1.192286<span class="token punctuation">,</span>  6.640223 <span class="token punctuation">)</span>    3.03266922
+ WF centre and spread   19 <span class="token punctuation">(</span>  0.000040<span class="token punctuation">,</span> -3.583406<span class="token punctuation">,</span>  2.908021 <span class="token punctuation">)</span>    3.00135911
+ WF centre and spread   20  <span class="token punctuation">(</span>-0.000038<span class="token punctuation">,</span> -3.581452<span class="token punctuation">,</span>  2.906608 <span class="token punctuation">)</span>     3.05025038
+ WF centre and spread   21 <span class="token punctuation">(</span>  0.000032<span class="token punctuation">,</span> -3.585788<span class="token punctuation">,</span>  2.906424 <span class="token punctuation">)</span>    3.03256640
+ WF centre and spread   22 <span class="token punctuation">(</span>  0.000001<span class="token punctuation">,</span>  1.194548<span class="token punctuation">,</span> 4.773330 <span class="token punctuation">)</span>     2.09798869
+ WF centre and spread   23  <span class="token punctuation">(</span>-0.000003<span class="token punctuation">,</span>  1.194537<span class="token punctuation">,</span>  4.773332 <span class="token punctuation">)</span>    2.05011802
+ WF centre and spread   24 <span class="token punctuation">(</span>  0.000037<span class="token punctuation">,</span>  1.194539<span class="token punctuation">,</span> 4.773340 <span class="token punctuation">)</span>     2.04466360
+ WF centre and spread   25  <span class="token punctuation">(</span>-0.000011<span class="token punctuation">,</span> -1.194381<span class="token punctuation">,</span>  1.130260 <span class="token punctuation">)</span>     2.00573073
+ WF centre and spread   26 <span class="token punctuation">(</span>  0.000002<span class="token punctuation">,</span> -1.216981<span class="token punctuation">,</span>  1.140268 <span class="token punctuation">)</span>    1.96786075
+ WF centre and spread   27 <span class="token punctuation">(</span>  0.000007<span class="token punctuation">,</span> -1.172191<span class="token punctuation">,</span>  1.140687 <span class="token punctuation">)</span>    1.95993647
+ WF centre and spread   28  <span class="token punctuation">(</span>-0.000006<span class="token punctuation">,</span> -3.583766<span class="token punctuation">,</span>  8.416405 <span class="token punctuation">)</span>     2.00573730
+ WF centre and spread   29 <span class="token punctuation">(</span>  0.000018<span class="token punctuation">,</span> -3.561165<span class="token punctuation">,</span>  8.406400 <span class="token punctuation">)</span>    1.96784170
+ WF centre and spread   30  <span class="token punctuation">(</span>-0.000007<span class="token punctuation">,</span> -3.605935<span class="token punctuation">,</span>  8.405982 <span class="token punctuation">)</span>     1.95999981
+ Sum of centres and spreads <span class="token punctuation">(</span>  0.000000<span class="token punctuation">,</span>-50.170584<span class="token punctuation">,</span>143.200000 <span class="token punctuation">)</span>  72.45644902
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<blockquote>
+<p>①首先看center，看看你的center是不是束缚在原子本身的位置上。这点可以和原子坐标做对比。原子坐标也可以在wannier90.wout中找到。在构造的Wannier函数中，可以发现Wannier函数还是很好的坐落在原子位置上。如果你的Wannier函数能够很好的坐落在原子位置上，那么也能反应出你的Wannier函数的对称性很好。</p>
+</blockquote>
+<div class="_2Uzcx_"><button class="VJbwyy" type="button" aria-label="复制代码"><i aria-label="icon: copy" class="anticon anticon-copy"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="copy" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M832 64H296c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h496v688c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8V96c0-17.7-14.3-32-32-32zM704 192H192c-17.7 0-32 14.3-32 32v530.7c0 8.5 3.4 16.6 9.4 22.6l173.3 173.3c2.2 2.2 4.7 4 7.4 5.5v1.9h4.2c3.5 1.3 7.2 2 11 2H704c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32zM350 856.2L263.9 770H350v86.2zM664 888H414V746c0-22.1-17.9-40-40-40H232V264h432v624z"></path></svg></i></button><pre class="line-numbers  language-ruby"><code class="  language-ruby"><span class="token operator">*</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">*</span>
+<span class="token operator">|</span>  <span class="token constant">Site</span>       <span class="token constant">Fractional</span> <span class="token constant">Coordinate</span>          <span class="token constant">Cartesian</span> <span class="token constant">Coordinate</span> <span class="token punctuation">(</span><span class="token constant">Ang</span><span class="token punctuation">)</span>     <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">+</span>
+<span class="token operator">|</span><span class="token constant">Bi</span>   <span class="token number">1</span>  <span class="token number">0.39900</span>   <span class="token number">0.39900</span>   <span class="token number">0.69700</span>  <span class="token operator">|</span>    <span class="token number">0.00000</span>  <span class="token operator">-</span><span class="token number">1.19454</span>  <span class="token number">6.65403</span>    <span class="token operator">|</span>
+<span class="token operator">|</span><span class="token constant">Bi</span>   <span class="token number">2</span>  <span class="token number">0.60100</span>   <span class="token number">0.60100</span>   <span class="token number">0.30300</span>  <span class="token operator">|</span>    <span class="token number">0.00000</span>  <span class="token operator">-</span><span class="token number">3.58361</span>  <span class="token number">2.89264</span>    <span class="token operator">|</span>
+<span class="token operator">|</span><span class="token constant">Se</span>   <span class="token number">1</span> <span class="token operator">-</span><span class="token number">0.00000</span>  <span class="token operator">-</span><span class="token number">0.00000</span>   <span class="token number">0.50000</span>  <span class="token operator">|</span>    <span class="token number">0.00000</span>   <span class="token number">1.19454</span>  <span class="token number">4.77333</span>    <span class="token operator">|</span>
+<span class="token operator">|</span><span class="token constant">Se</span>   <span class="token number">2</span>  <span class="token number">0.20600</span>   <span class="token number">0.20600</span>   <span class="token number">0.11800</span>  <span class="token operator">|</span>    <span class="token number">0.00000</span>  <span class="token operator">-</span><span class="token number">1.19454</span>  <span class="token number">1.12651</span>    <span class="token operator">|</span>
+<span class="token operator">|</span><span class="token constant">Se</span>   <span class="token number">3</span>  <span class="token number">0.79400</span>   <span class="token number">0.79400</span>   <span class="token number">0.88200</span>  <span class="token operator">|</span>    <span class="token number">0.00000</span> <span class="token operator">-</span><span class="token number">3.58361</span>   <span class="token number">8.42016</span>    <span class="token operator">|</span>
+<span class="token operator">*</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">*</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div>
+<blockquote>
+<p>②检查轨道的简并性问题，在Bi2Se3里头，px, py, pz能够近似简并。从spread中能够看出我们的Wannier函数符合这一条件。</p>
+</blockquote>
+<blockquote>
+<p>③检查自旋的简并。也就是对比第n+1条和第n+15条的center和spread。这个直接决定了你的Wannier函数是否具有时间反演不变性。这里的Wannier函数的顺序决定于不同的软件包。VASP的顺序和QE的顺序是不同的，这个需要自己去看相关的说明书。</p>
+</blockquote>
+</article>
