@@ -1460,7 +1460,7 @@ ${\displaystyle ({\frac {1}{2}})}$
 
 `\left(\frac{1}{2} \right`
 
-${\displaystyle \left({ \frac{1}{2}} \right)}$
+${\displaystyle \left({ \frac{1}{2} \right)}$
 
 使用 `\left` 和 `\right` 来创建自动匹配高度的 (圆括号)，[方括号] 和 {花括号} 。
 
