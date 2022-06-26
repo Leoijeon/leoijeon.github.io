@@ -1,0 +1,445 @@
+<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-ec73c37 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ec73c37" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-91a026b elementor-column elementor-col-100 elementor-top-column" data-id="91a026b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c16be17 elementor-widget elementor-widget-heading" data-id="c16be17" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">How to construct high-quality Wannier functions</h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-14064ea elementor-section-height-min-height elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="14064ea" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e47ef1c elementor-column elementor-col-16 elementor-top-column" data-id="e47ef1c" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-0b9eaed elementor-column elementor-col-66 elementor-top-column" data-id="0b9eaed" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-867dd1b elementor-widget elementor-widget-text-editor" data-id="867dd1b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-align: center;">QuanSheng Wu</p><p style="text-align: center;">École Polytechnique Fédérale de Lausanne (EPFL), Switzerland</p><p style="text-align: center;">Constructed on October 30, 2019</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4ffbd74 elementor-column elementor-col-16 elementor-top-column" data-id="4ffbd74" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-fe47e4c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fe47e4c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0eda2c1 elementor-column elementor-col-16 elementor-top-column" data-id="0eda2c1" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-53a09fc elementor-column elementor-col-66 elementor-top-column" data-id="53a09fc" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5644530 elementor-widget elementor-widget-text-editor" data-id="5644530" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="color: #000000;">&nbsp; High-quality Wannier functions (WFs) are very useful for physical properties calculations after we obtained the self-consistent charge density from the first-principle calculations. However, for the beginners, it’s not easy to obtain good WFs. Here we would like to introduce a standard way to construct high-quality Wannier functions with first-principle software package and software Wannier90. </span><span style="font-size: 15px; color: #000000;">Here we don’t focus on constructing maximum localized Wannier functions (MLWFs). We only want to construct a good tight-binding model based on WFs that are able to reproduce the band structure in the energy range we are interested in.&nbsp;</span><span style="font-size: 15px; color: #000000;">Here are four criterions of high-quality WFs.</span></p><ul style="list-style-type: circle;"><li><span style="color: #000000;">1. Perfect fitting to the DFT bands in the energy range you are interested in.</span></li><li><span style="color: #000000;">2. Keep the atomic orbital symmetry.</span></li><li><span style="color: #000000;">3. Well localized.</span></li><li><span style="color: #000000;">4. As small number of WFs as possible.&nbsp;</span></li></ul><div><p><span style="color: #000000;">There are three important steps to reach four criterions.&nbsp;</span></p></div><ul><li><span style="color: #000000;">1. Choose projectors.</span></li><li><span style="color: #000000;">2. Choose disentanglement energy window.</span></li><li><span style="color: #000000;">3. Choose frozen energy window.&nbsp;</span></li></ul><p><span style="color: #000000;">I would like to take Bi2Se3 as an example.&nbsp;In order to save the computation cost, we don’t take into account the spin-orbit coupling (SOC) effect.&nbsp;</span></p><h6><span style="color: #000000;"><strong>1. Choose projectors.</strong>&nbsp;</span></h6><p><span style="color: #000000;">Let’s perform energy band analysis first.&nbsp;Fig 1 is the band structure of Bi2Se3 without considering SOC. The green shaded part is the energy range which we care about. We want to construct a tight binding model which can well reproduce the energy bands in that interested range. However, those band is connected with other bands below and above. Noticeably, there is a big gap around -8.4eV and -6eV. This is a good sign since the bands below this gap is not hybridized with the bands we are interested in. In this case, those bands below the gap are not necessary to be presented in our tight binding model. Eventually, the number of WFs reduce. It fulfills the fourth criterion.&nbsp;</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-cb15352 elementor-column elementor-col-16 elementor-top-column" data-id="cb15352" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-fa9baf2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fa9baf2" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f259860 elementor-column elementor-col-16 elementor-top-column" data-id="f259860" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5b15be1 elementor-column elementor-col-66 elementor-top-column" data-id="5b15be1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5a1e192 elementor-widget elementor-widget-image" data-id="5a1e192" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+							<figure class="wp-caption">
+										<img width="790" height="529" src="https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3-bandstructure-with-is-1024x686.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3-bandstructure-with-is-1024x686.png 1024w, https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3-bandstructure-with-is-300x201.png 300w, https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3-bandstructure-with-is-768x515.png 768w, https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3-bandstructure-with-is.png 1583w" sizes="(max-width: 790px) 100vw, 790px">											<figcaption class="widget-image-caption wp-caption-text">Fig 1. Band structure of Bi2Se3 without consideration of spin-orbit coupling.</figcaption>
+										</figure>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-31681b3 elementor-column elementor-col-16 elementor-top-column" data-id="31681b3" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-d893448 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d893448" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6464e17 elementor-column elementor-col-16 elementor-top-column" data-id="6464e17" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-50305dc elementor-column elementor-col-66 elementor-top-column" data-id="50305dc" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d448fd8 elementor-widget elementor-widget-text-editor" data-id="d448fd8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="color: #000000;">&nbsp;After a first glance of the band structure, we still have to figure out what is the character of the bands in the interested energy range and figure out which bands are highly hybridized with them.&nbsp; This step is called “fatband analysis” where we need to project the atomic orbital onto the Bloch wave functions which is called the projected weight. We project the Bloch wave functions onto the s, p, d atomic orbitals of Bi and Se. The results are shown in Fig 2. Fig 2(a) and (d) show that the energy bands between [-15, -8]eV are dominated by the s orbital of Bismuth and Selenium. Fig 2 (c) and (f) show that the d orbitals of Bi and Se are located above 5eV. Fig 2 (b) and (e) show that the energy range [-6, 5] eV is dominated by p orbitals of Bi and Se. And our interested energy range, indicated as green shade in Fig 1, is in this energy range. Although there is band overlap between p and d orbitals at around 4eV, we still can omit the contribution from d orbitals since they are not high hybridized with p orbitals and can be shifted away through some deformation of the band structure.&nbsp;</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-cf330df elementor-column elementor-col-16 elementor-top-column" data-id="cf330df" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-0674ab3 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="0674ab3" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b30f24f elementor-column elementor-col-16 elementor-top-column" data-id="b30f24f" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-bece8e4 elementor-column elementor-col-66 elementor-top-column" data-id="bece8e4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-62ff588 elementor-widget elementor-widget-image" data-id="62ff588" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+							<figure class="wp-caption">
+										<img width="790" height="482" src="https://www.wanniertools.org/wp-content/uploads/2019/10/fatband-bi2se3-1024x625.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://www.wanniertools.org/wp-content/uploads/2019/10/fatband-bi2se3-1024x625.png 1024w, https://www.wanniertools.org/wp-content/uploads/2019/10/fatband-bi2se3-300x183.png 300w, https://www.wanniertools.org/wp-content/uploads/2019/10/fatband-bi2se3-768x469.png 768w" sizes="(max-width: 790px) 100vw, 790px">											<figcaption class="widget-image-caption wp-caption-text">Fig 2. Fatband Of Bi2Se3. The dashed box is our selection. Bi p orbitals and Se p orbitals are used as projectors. This plot is plotted with an open source package PyProcar.</figcaption>
+										</figure>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-258cd65 elementor-column elementor-col-16 elementor-top-column" data-id="258cd65" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-5d22581 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5d22581" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cf31ee5 elementor-column elementor-col-16 elementor-top-column" data-id="cf31ee5" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-97e143e elementor-column elementor-col-66 elementor-top-column" data-id="97e143e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5e791a0 elementor-widget elementor-widget-text-editor" data-id="5e791a0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="color: #000000;">After the “fatband analysis”, we choose p orbitals of Bi and Se as projectors for WFs. Then there will be (2 Bi atoms)*(3 p orbitals)+(3 Se atoms) *(3 p orbitals)=15 atomic orbitals, totally 15 WFs without SOC.</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c0113d3 elementor-column elementor-col-16 elementor-top-column" data-id="c0113d3" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-4123109 elementor-section-content-space-between elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4123109" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-80009b6 elementor-column elementor-col-16 elementor-top-column" data-id="80009b6" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2fa0a5d elementor-column elementor-col-66 elementor-top-column" data-id="2fa0a5d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-23699fa elementor-widget elementor-widget-text-editor" data-id="23699fa" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>begin projections</p><p><span style="font-size: 15px;">Bi : p</span></p><p style="text-align: left;">Se : p</p><p>end projections</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2368eb1 elementor-column elementor-col-16 elementor-top-column" data-id="2368eb1" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-d90480c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d90480c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2f3f0e5 elementor-column elementor-col-16 elementor-top-column" data-id="2f3f0e5" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-9debffe elementor-column elementor-col-66 elementor-top-column" data-id="9debffe" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c7013a7 elementor-widget elementor-widget-text-editor" data-id="c7013a7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>2. Choose disentanglement energy window dis_win</h5><p><span style="color: #000000;">&nbsp; The disentanglement window is a window to extract the target bands. There are two rules to set this window.&nbsp;<b>1) Not only the target bands should be included in this window, but also the major weight of the projectors should fall into this window. 2) This window should as small as possible in order to reduce the computational cost.</b> Fig 3 gives three choices of the window marked as colored shade. Fig 3(a) is the right choice. Fig 3(b) is a very bad choice since there is one missing band,&nbsp;</span><span style="color: #000000; font-family: Roboto, sans-serif; font-size: 15px; font-style: normal; font-weight: 400;">marked by dashed circle,</span><span style="color: #000000; font-size: 15px;">&nbsp;whose weight comes from the projectors (See Fig 4b and 4e). If this weight is missing, then the spread of the WFs could become large. Fig 3(c) shows a not good choice since it contains unnecessary bands which don’t contain projector’s character.</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-23202d2 elementor-column elementor-col-16 elementor-top-column" data-id="23202d2" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-c6e5bc2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c6e5bc2" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-921adec elementor-column elementor-col-16 elementor-top-column" data-id="921adec" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-0753873 elementor-column elementor-col-66 elementor-top-column" data-id="0753873" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c08b1ba elementor-widget elementor-widget-image" data-id="c08b1ba" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+							<figure class="wp-caption">
+										<img width="790" height="244" src="https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3_dis_win-1024x316.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3_dis_win-1024x316.png 1024w, https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3_dis_win-300x93.png 300w, https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3_dis_win-768x237.png 768w, https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3_dis_win.png 1123w" sizes="(max-width: 790px) 100vw, 790px">											<figcaption class="widget-image-caption wp-caption-text">Fig 3. Choice of disentanglement window dis_win of Bi2Se3. (a) is the right choice. (b) is a wrong choice since there is one missing weight which belongs to the p orbitals of Bi and Se. (c) is not a good choice since there is unnecessary energy window [-16, -8]eV where there is almost no weight coming from the projectors.</figcaption>
+										</figure>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-d5758c8 elementor-column elementor-col-16 elementor-top-column" data-id="d5758c8" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-ddcde4d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ddcde4d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ea64321 elementor-column elementor-col-16 elementor-top-column" data-id="ea64321" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-aec8010 elementor-column elementor-col-66 elementor-top-column" data-id="aec8010" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c0f4960 elementor-widget elementor-widget-text-editor" data-id="c0f4960" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h6><span style="color: #000000;">3. Choose frozen energy window froz_win</span></h6><p><span style="color: #000000;">The frozen window is a window used for disentanglement procedure. The Bloch states will not rotate with other bands out of this window. There are three rules for choosing froz_win.&nbsp;<b>1)&nbsp;In froz_win, there should be no weights (contributions) coming from other orbitals besides the projectors.&nbsp; 2) The energy range purely coming from the projectors should be included in the froz_win. 3) froz_win should be as large as possible.&nbsp; </b>Fig 4 shows three choices. (a) is a good choice since it fulfill three rules . (b) is a wrong choice since it breaks the first rule. (c) is correct choice but not a perfect one since it doesn’t follow rule 2 and 3.&nbsp;</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1f7202b elementor-column elementor-col-16 elementor-top-column" data-id="1f7202b" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-10defae elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="10defae" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a385b86 elementor-column elementor-col-16 elementor-top-column" data-id="a385b86" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-87aae23 elementor-column elementor-col-66 elementor-top-column" data-id="87aae23" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-20a173a elementor-widget elementor-widget-image" data-id="20a173a" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+							<figure class="wp-caption">
+										<img width="790" height="244" src="https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3_froz_win-1024x316.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3_froz_win-1024x316.png 1024w, https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3_froz_win-300x93.png 300w, https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3_froz_win-768x237.png 768w, https://www.wanniertools.org/wp-content/uploads/2019/10/Bi2Se3_froz_win.png 1123w" sizes="(max-width: 790px) 100vw, 790px">											<figcaption class="widget-image-caption wp-caption-text">Fig 4. Choice of frozen window froz_win of Bi2Se3. (a) A good choice. (b) a wrong choice since it contains bands that coming from d orbitals of Bi  which is not a projector. (c) Not a perfect choice since there are more bands that are purely coming from the projectors.</figcaption>
+										</figure>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e07ec18 elementor-column elementor-col-16 elementor-top-column" data-id="e07ec18" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-9e02924 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9e02924" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c9bce7f elementor-column elementor-col-16 elementor-top-column" data-id="c9bce7f" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e8733e9 elementor-column elementor-col-66 elementor-top-column" data-id="e8733e9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c2fa59b elementor-widget elementor-widget-text-editor" data-id="c2fa59b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h6><span style="color: #000000;">4. Results</span></h6><p><span style="color: #000000;">After the above procedure, you shall get very good WFs with high possibility. Fig 5 shows the band structure comparison between DFT (black lines) and Wannier interpolation (red dots). It shows perfect agreement.</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-0003a24 elementor-column elementor-col-16 elementor-top-column" data-id="0003a24" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-854bac9 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="854bac9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f2b8548 elementor-column elementor-col-16 elementor-top-column" data-id="f2b8548" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-833a867 elementor-column elementor-col-66 elementor-top-column" data-id="833a867" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-55468d3 elementor-widget elementor-widget-image" data-id="55468d3" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+							<figure class="wp-caption">
+										<img width="790" height="609" src="https://www.wanniertools.org/wp-content/uploads/2019/10/DFT-Wannier-Bi2Se3-NSOC-1024x789.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://www.wanniertools.org/wp-content/uploads/2019/10/DFT-Wannier-Bi2Se3-NSOC-1024x789.png 1024w, https://www.wanniertools.org/wp-content/uploads/2019/10/DFT-Wannier-Bi2Se3-NSOC-300x231.png 300w, https://www.wanniertools.org/wp-content/uploads/2019/10/DFT-Wannier-Bi2Se3-NSOC-768x592.png 768w, https://www.wanniertools.org/wp-content/uploads/2019/10/DFT-Wannier-Bi2Se3-NSOC.png 1288w" sizes="(max-width: 790px) 100vw, 790px">											<figcaption class="widget-image-caption wp-caption-text">Fig 5. The band structure comparison between DFT (black lines) and Wannier interpolation (red dots).</figcaption>
+										</figure>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4b0b6c7 elementor-column elementor-col-16 elementor-top-column" data-id="4b0b6c7" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-b40295a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b40295a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3cae2a9 elementor-column elementor-col-16 elementor-top-column" data-id="3cae2a9" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c43010b elementor-column elementor-col-66 elementor-top-column" data-id="c43010b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4ed71d2 elementor-widget elementor-widget-text-editor" data-id="4ed71d2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h6><span style="color: #000000;">5. Discussion</span></h6><p><span style="color: #000000;">In the end, we would like to share some other tips.&nbsp;</span></p><ol><li><span style="color: #000000;">It’s better not to set dis_num_iter too large, 200 is enough for most of the time. If it’s too large, then the Bloch bands could be over mixed.&nbsp;</span></li><li><span style="color: #000000;">If you want atomic like WFs, it’s better to set num_iter less than 20. Large number of num_iter would mix the WFs such that the output WFs are not atomic like.&nbsp;</span></li><li><span style="color: #000000;">If you find that the spread of WFs are very large or some wiggles in the Wannier interpolated bands, then try to tune the projectors, dis_win and froz_win carefully.&nbsp; &nbsp;</span></li></ol><div><span style="color: #000000;">Special for VASP user:</span><span style="color: #000000;"><br></span><br><span style="color: #000000;">If you are going to construct WFs for a system with SOC, then Please set “ISYM=-1” in the INCAR file if “LWANNIER90 = T” is present.&nbsp;</span><span style="color: #000000; font-family: Roboto, sans-serif; font-size: 15px; font-style: normal; font-weight: 400;">Since there are some bugs in copying spinor wave functions from one k point to the one related by symmetry in VASP, then the</span><span style="color: #000000; font-size: 15px;">&nbsp;quality of WFs would be significantly improved after we turn off this symmetry tag.</span></div><div><span style="color: #000000;">&nbsp;</span></div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a684b4b elementor-column elementor-col-16 elementor-top-column" data-id="a684b4b" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
