@@ -1,0 +1,355 @@
+---
+title:  python2 和 python3 的区别
+tags: python
+pageview: true
+layout: article
+license: ture
+toc: ture
+key: a20220901
+header:
+  theme: dark
+  background: 'linear-gradient(135deg, rgb(21, 81, 138), rgb(147, 15, 139))'
+aside:
+    toc: true
+sitemap: true
+mathjax: true
+author: 转载
+---
+<div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<p>之前做Spark大数据分析的时候，考虑要做Python的版本升级，对于Python2和Python3的差异做了一个调研，主要对于语法和第三方工具包支持程度进行了比较。</p>
+<h2 id="基本语法差异">基本语法差异<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<h3 id="核心类差异">核心类差异<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<ol class="wiz-list-level1">
+<li>
+<p>Python3对Unicode字符的原生支持</p>
+
+<p>Python2中使用 ASCII 码作为默认编码方式导致string有两种类型str和unicode，Python3只支持unicode的string。python2和python3字节和字符对应关系为：</p>
+<p><img title="" src="../assets/20220901/4ae8675b-99bf-3ad8-af51-4183f68f4981.png" alt="img" class="medium-zoom-image"></p>
+</li>
+<li>
+<p>Python3采用的是绝对路径的方式进行import。</p>
+<p>Python2中相对路径的import会导致标准库导入变得困难（想象一下，同一目录下有file.py，如何同时导入这个文件和标准库file）。Python3中这一点将被修改，如果还需要导入同一目录的文件必须使用绝对路径，否则只能使用相关导入的方式来进行导入。</p>
+</li>
+<li>
+<p>Python2中存在老式类和新式类的区别，Python3统一采用新式类。新式类声明要求继承object，必须用新式类应用多重继承。</p>
+</li>
+<li>
+<p>Python3使用更加严格的缩进。Python2的缩进机制中，1个tab和8个space是等价的，所以在缩进中可以同时允许tab和space在代码中共存。这种等价机制会导致部分IDE使用存在问题。Python3中1个tab只能找另外一个tab替代，因此tab和space共存会导致报错：TabError: inconsistent use of tabs and spaces in indentation.</p>
+</li>
+</ol>
+<h3 id="废弃类差异">废弃类差异<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<ol class="wiz-list-level1">
+<li>
+<p>print语句被python3废弃，统一使用print函数</p>
+</li>
+<li>
+<p>exec语句被python3废弃，统一使用exec函数</p>
+</li>
+<li>
+<p>execfile语句被Python3废弃，推荐使用exec(open("./filename").read())</p>
+</li>
+<li>
+<p>不相等操作符"&lt;&gt;"被Python3废弃，统一使用"!="</p>
+</li>
+<li>
+<p>long整数类型被Python3废弃，统一使用int</p>
+</li>
+<li>
+<p>xrange函数被Python3废弃，统一使用range，Python3中range的机制也进行修改并提高了大数据集生成效率</p>
+</li>
+<li>
+<p>Python3中这些方法再不再返回list对象：dictionary关联的keys()、values()、items()，zip()，map()，filter()，但是可以通过list强行转换：</p>
+<div class="wiz-code-container" data-mode="python">
+<pre class="highlighter-hljs" highlighted="true"><code class="highlighter-hljs hljs language-kotlin">mydict={<span class="hljs-string">"a"</span>:<span class="hljs-number">1</span>,<span class="hljs-string">"b"</span>:<span class="hljs-number">2</span>,<span class="hljs-string">"c"</span>:<span class="hljs-number">3</span>}
+mydict.keys()  #&lt;built-<span class="hljs-keyword">in</span> method keys of dict <span class="hljs-keyword">object</span> at <span class="hljs-number">0x000000000040B4C8</span>&gt;
+list(mydict.keys()) #[<span class="hljs-string">'a'</span>, <span class="hljs-string">'c'</span>, <span class="hljs-string">'b'</span>]</code></pre>
+</div>
+</li>
+<li>
+<p>迭代器iterator的next()函数被Python3废弃，统一使用next(iterator)</p>
+</li>
+<li>
+<p>raw_input函数被Python3废弃，统一使用input函数</p>
+</li>
+<li>
+<p>字典变量的has_key函数被Python废弃，统一使用in关键词</p>
+</li>
+<li>
+<p>file函数被Python3废弃，统一使用open来处理文件，可以通过io.IOBase检查文件类型</p>
+</li>
+<li>
+<p>apply函数被Python3废弃</p>
+</li>
+<li>
+<p>异常StandardError 被Python3废弃，统一使用Exception</p>
+</li>
+</ol>
+<h3 id="修改类差异">修改类差异<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<ol class="wiz-list-level1">
+<li>
+<p>浮点数除法操作符/和//区别</p>
+<ul>
+<li>Python2:/是整数除法，//是小数除法</li>
+<li>Python3:/是小数除法，//是整数除法。</li>
+</ul>
+</li>
+<li>
+<p>异常抛出和捕捉机制区别</p>
+<ul>
+<li>Python2</li>
+</ul>
+<div class="wiz-code-container" data-mode="python">
+<pre class="highlighter-hljs" highlighted="true"><code class="highlighter-hljs hljs language-python"><span class="hljs-keyword">raise</span> IOError, <span class="hljs-string">"file error"</span> <span class="hljs-comment">#抛出异常</span>
+<span class="hljs-keyword">except</span> NameError, err:  <span class="hljs-comment">#捕捉异常</span></code></pre>
+</div>
+<ul>
+<li>Python3</li>
+</ul>
+<div class="wiz-code-container" data-mode="python">
+<pre class="highlighter-hljs" highlighted="true"><code class="highlighter-hljs hljs language-python"><span class="hljs-keyword">raise</span> IOError(<span class="hljs-string">"file error"</span>) <span class="hljs-comment">#抛出异常</span>
+<span class="hljs-keyword">except</span> NameError <span class="hljs-keyword">as</span> err: <span class="hljs-comment">#捕捉异常</span></code></pre>
+</div>
+</li>
+<li>
+<p>for循环中变量值区别</p>
+<ul>
+<li>Python2，for循环会修改外部相同名称变量的值</li>
+</ul>
+<div class="wiz-code-container" data-mode="python">
+<pre class="highlighter-hljs" highlighted="true"><code class="highlighter-hljs hljs language-python">i = <span class="hljs-number">1</span>
+<span class="hljs-built_in">print</span> （<span class="hljs-string">'comprehension: '</span>, [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">5</span>)]）
+<span class="hljs-built_in">print</span> （<span class="hljs-string">'after: i ='</span>, i  ） <span class="hljs-comment">#i=4</span></code></pre>
+</div>
+<ul>
+<li>Python3，for循环不会修改外部相同名称变量的值</li>
+</ul>
+<div class="wiz-code-container" data-mode="python">
+<pre class="highlighter-hljs" highlighted="true"><code class="highlighter-hljs hljs language-python">i = <span class="hljs-number">1</span>
+<span class="hljs-built_in">print</span> （<span class="hljs-string">'comprehension: '</span>, [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">5</span>)]）
+<span class="hljs-built_in">print</span> （<span class="hljs-string">'after: i ='</span>, i  ） <span class="hljs-comment">#i=1</span></code></pre>
+</div>
+</li>
+<li>
+<p>round函数返回值区别</p>
+<ul>
+<li>Python2，round函数返回float类型值</li>
+</ul>
+<div class="wiz-code-container" data-mode="python">
+<pre class="highlighter-hljs" highlighted="true"><code class="highlighter-hljs hljs language-python"><span class="hljs-built_in">isinstance</span>(<span class="hljs-built_in">round</span>(<span class="hljs-number">15.5</span>),<span class="hljs-built_in">int</span>) <span class="hljs-comment">#True</span></code></pre>
+</div>
+<ul>
+<li>Python3，round函数返回int类型值</li>
+</ul>
+<div class="wiz-code-container" data-mode="python">
+<pre class="highlighter-hljs" highlighted="true"><code class="highlighter-hljs hljs language-python"><span class="hljs-built_in">isinstance</span>(<span class="hljs-built_in">round</span>(<span class="hljs-number">15.5</span>),<span class="hljs-built_in">float</span>) <span class="hljs-comment">#True</span></code></pre>
+</div>
+</li>
+<li>
+<p>比较操作符区别</p>
+<ul>
+<li>Python2中任意两个对象都可以比较</li>
+</ul>
+<div class="wiz-code-container" data-mode="python">
+<pre class="highlighter-hljs" highlighted="true"><code class="highlighter-hljs hljs language-basic"><span class="hljs-symbol">11 </span>&lt; <span class="hljs-comment">'test' #True</span></code></pre>
+</div>
+<ul>
+<li>Python3中只有同一数据类型的对象可以比较</li>
+</ul>
+<div class="wiz-code-container" data-mode="python">
+<pre class="highlighter-hljs" highlighted="true"><code class="highlighter-hljs hljs language-basic"><span class="hljs-symbol">11 </span>&lt; <span class="hljs-comment">'test' # TypeError: unorderable types: int() &lt; str()</span></code></pre>
+</div>
+</li>
+</ol>
+<h3 id="新增类差异">新增类差异<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<p>所有在Python3.X中增加的新特性在Python2中都不支持，这些新特性的说明在官网中有详细的说明：</p>
+<ul>
+<li>3.1 <a href="https://docs.python.org/3.1/whatsnew/" rel="noopener">https://docs.python.org/3.1/whatsnew/</a></li>
+<li>3.2 <a href="https://docs.python.org/3.2/whatsnew/3.2.html" rel="noopener">https://docs.python.org/3.2/whatsnew/3.2.html</a></li>
+<li>3.3 <a href="https://docs.python.org/3.3/whatsnew/3.0.html" rel="noopener">https://docs.python.org/3.3/whatsnew/3.0.html</a></li>
+<li>3.4 <a href="https://docs.python.org/3.4/whatsnew/3.4.html" rel="noopener">https://docs.python.org/3.4/whatsnew/3.4.html</a></li>
+<li>3.5 <a href="https://docs.python.org/3.5/whatsnew/3.5.html" rel="noopener">https://docs.python.org/3.5/whatsnew/3.5.html</a></li>
+<li>3.6 <a href="https://docs.python.org/3.6/whatsnew/3.6.html" rel="noopener">https://docs.python.org/3.6/whatsnew/3.6.html</a></li>
+</ul>
+<p>国内有对这些特性中的重要点进行介绍的博文，可以作为参考：<a href="http://www.cnblogs.com/animalize/p/5633215.html" rel="noopener">http://www.cnblogs.com/animalize/p/5633215.html</a></p>
+<h2 id="第三方工具包">第三方工具包<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<p>我们在pip官方下载源<a href="https://pypi.python.org" rel="noopener">pypi</a>搜索Python2.7和Python3.5的第三方工具包数可以发现，Python2.7版本对应的第三方工具类目数量是28523,Python3.5版本的数量是12457，这两个版本在第三方工具包支持数量差距相当大。</p>
+<p><a href="https://pypi.python.org/pypi?:action=browse&amp;c=532" rel="noopener">https://pypi.python.org/pypi?:action=browse&amp;c=532</a></p>
+<p><a href="https://pypi.python.org/pypi?:action=browse&amp;c=607" rel="noopener">https://pypi.python.org/pypi?:action=browse&amp;c=607</a></p>
+<p>我们从数据分析的应用角度列举了常见实用的第三方工具包（如下表），并分析这些工具包在Python2.7和Python3.5的支持情况：</p>
+<div class="wiz-table-container" style="position: relative; padding: 0">
+<div class="wiz-table-body">
+<div class="table-wrapper"><table>
+<thead>
+<tr><th>分类</th><th>工具名</th><th>用途</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>数据收集</td>
+<td>scrapy</td>
+<td>网页采集，爬虫</td>
+</tr>
+<tr>
+<td>数据收集</td>
+<td>scrapy-redis</td>
+<td>分布式爬虫</td>
+</tr>
+<tr>
+<td>数据收集</td>
+<td>selenium</td>
+<td>web测试，仿真浏览器</td>
+</tr>
+<tr>
+<td>数据处理</td>
+<td>beautifulsoup</td>
+<td>网页解释库，提供lxml的支持</td>
+</tr>
+<tr>
+<td>数据处理</td>
+<td>lxml</td>
+<td>xml解释库</td>
+</tr>
+<tr>
+<td>数据处理</td>
+<td>xlrd</td>
+<td>excel文件读取</td>
+</tr>
+<tr>
+<td>数据处理</td>
+<td>xlwt</td>
+<td>excel文件写入</td>
+</tr>
+<tr>
+<td>数据处理</td>
+<td>xlutils</td>
+<td>excel文件简单格式修改</td>
+</tr>
+<tr>
+<td>数据处理</td>
+<td>pywin32</td>
+<td>excel文件的读取写入及复杂格式定制</td>
+</tr>
+<tr>
+<td>数据处理</td>
+<td>Python-docx</td>
+<td>Word文件的读取写入</td>
+</tr>
+<tr>
+<td>数据分析</td>
+<td>numpy</td>
+<td>基于矩阵的数学计算库</td>
+</tr>
+<tr>
+<td>数据分析</td>
+<td>pandas</td>
+<td>基于表格的统计分析库</td>
+</tr>
+<tr>
+<td>数据分析</td>
+<td>scipy</td>
+<td>科学计算库，支持高阶抽象和复杂模型</td>
+</tr>
+<tr>
+<td>数据分析</td>
+<td>statsmodels</td>
+<td>统计建模和计量经济学工具包</td>
+</tr>
+<tr>
+<td>数据分析</td>
+<td>scikit-learn</td>
+<td>机器学习工具库</td>
+</tr>
+<tr>
+<td>数据分析</td>
+<td>gensim</td>
+<td>自然语言处理工具库</td>
+</tr>
+<tr>
+<td>数据分析</td>
+<td>jieba</td>
+<td>中文分词工具库</td>
+</tr>
+<tr>
+<td>数据存储</td>
+<td>MySQL-python</td>
+<td>mysql的读写接口库</td>
+</tr>
+<tr>
+<td>数据存储</td>
+<td>mysqlclient</td>
+<td>mysql的读写接口库</td>
+</tr>
+<tr>
+<td>数据存储</td>
+<td>SQLAlchemy</td>
+<td>数据库的ORM封装</td>
+</tr>
+<tr>
+<td>数据存储</td>
+<td>pymssql</td>
+<td>sql server读写接口库</td>
+</tr>
+<tr>
+<td>数据存储</td>
+<td>redis</td>
+<td>redis的读写接口</td>
+</tr>
+<tr>
+<td>数据存储</td>
+<td>PyMongo</td>
+<td>mongodb的读写接口</td>
+</tr>
+<tr>
+<td>数据呈现</td>
+<td>matplotlib</td>
+<td>流行的数据可视化库</td>
+</tr>
+<tr>
+<td>数据呈现</td>
+<td>seaborn</td>
+<td>美观的数据可是湖库，基于matplotlib</td>
+</tr>
+<tr>
+<td>工具辅助</td>
+<td>jupyter</td>
+<td>基于web的python IDE，常用于数据分析</td>
+</tr>
+<tr>
+<td>工具辅助</td>
+<td>chardet</td>
+<td>字符检查工具</td>
+</tr>
+<tr>
+<td>工具辅助</td>
+<td>ConfigParser</td>
+<td>配置文件读写支持</td>
+</tr>
+<tr>
+<td>工具辅助</td>
+<td>requests</td>
+<td>HTTP库，用于网络访问</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<h3 id="工具安装问题">工具安装问题<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<ul>
+<li>windows环境</li>
+</ul>
+<p>Python2 无法安装mysqlclient。Python3 无法安装MySQL-python、 flup、functools32、Gooey、Pywin32、 webencodings。</p>
+<p>matplotlib在python3环境中安装报错：The following required packages can not be built:freetype, png。需要手动下载安装源码包安装解决。</p>
+<p>scrapy在python3环境中安装报错，需安装VC++2015安装包： <a href="http://landinghub.visualstudio.com/visual-cpp-build-tools" rel="noopener">http://landinghub.visualstudio.com/visual-cpp-build-tools</a></p>
+<p>scipy在Python3环境中安装报错，numpy.distutils.system_info.NotFoundError，需要自己手工下载对应的安装包，依赖numpy,pandas必须严格根据python版本、操作系统、64位与否。</p>
+<p>运行matplotlib后发现基础包numpy+mkl安装失败，需要自己下载，国内暂无下载源</p>
+<ul>
+<li>centos环境下</li>
+</ul>
+<p>python2无法安装mysql-python和mysqlclient包，报错：EnvironmentError: mysql_config not found，解决方案是安装mysql-devel包解决。使用matplotlib报错：no module named _tkinter，安装Tkinter、tk-devel、tc-devel解决。</p>
+<p>pywin32也无法在centos环境下安装。</p>
+<h3 id="工具测试结果">工具测试结果<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
+<p>解决上述的安装问题后，编写了测试脚本(附录)运行上述工具包的简单案例，测试结果均通过，表明上述第三方工具包安装成功后在Windows和Centos环境下均可以成功运行。</p>
+<div id="wiz-table-col-line" style="display: none">&nbsp;</div>
+<div id="wiz-table-row-line" style="display: none">&nbsp;</div>
+<div id="wiz-table-range-border_start" style="display: none">&nbsp;</div>
+<div id="wiz-table-range-border_range" style="display: none">&nbsp;</div>
+</div>
