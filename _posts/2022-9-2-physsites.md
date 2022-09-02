@@ -16,7 +16,7 @@ mathjax: true
 mathjax_autoNumber: true
 author: Leoi
 ---
-本页面可通过点击导航栏的书签（Bookmarks）进入。
+本页面可通过点击导航栏的书签（Bookmark）进入。
 
 ------------------
 
