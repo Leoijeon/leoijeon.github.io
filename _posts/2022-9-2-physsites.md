@@ -65,6 +65,16 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 # 科研工具类
 
+- VASP
+- QE
+- Wannier90
+- WannierTools
+- Paoflow
+- Linear response symmetry
+- EPW
+- SCTK
+- wien2k
+
 
 ## materials cloud 
 
