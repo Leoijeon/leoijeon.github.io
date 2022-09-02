@@ -1,6 +1,3 @@
-img[src*="#30w"] {
- width: 30%;
-}
 ---
 title:  Markdown 语法总结
 tags: Markdown
@@ -18,6 +15,9 @@ sitemap: true
 mathjax: true
 author: Leoi
 ---
+img[src*="#30w"] {
+ width: 30%;
+}
 ## 标题
 
 n个\#表示n级标题（\# 与标题要有空格）
