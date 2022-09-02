@@ -90,7 +90,7 @@ n个\#表示n级标题（\# 与标题要有空格）
   - Indented item
   - Indented item
 - Fourth item
-- 
+
 Tab缩进即可分层级
 
 ## 表格
@@ -175,6 +175,7 @@ See the section on [`code`](#code).
       上标：a<sup>2</sup>
       下标：$a_2$
       上标：$a^2$
+
 html：
 
 下标：a<sub>2</sub>
