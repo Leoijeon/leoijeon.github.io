@@ -6,14 +6,14 @@ header:
       zh-Hant:  歸檔
     url:        /archive.html
   - titles:
+      en:       Bookmarks
+      zh:       书签
+      zh-Hans:  书签
+      zh-Hant:  书签
+    url:        /posts/2022-9-2-physsites.md
+  - titles:
       en:       About
       zh:       关于
       zh-Hans:  关于
       zh-Hant:  關於
     url:        /about.html
-  - titles:
-      en:       Bookmarks
-      zh:       书签
-      zh-Hans:  书签
-      zh-Hant:  书签
-    url:        /_posts/2022-9-2-physsites.md
