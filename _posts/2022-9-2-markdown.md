@@ -131,10 +131,21 @@ See the section on [`code`](#code).
 	![图片alt](图片链接 "图片title")
 	[![沙漠图片](/assets/img/shiprock.jpg "Shiprock")](https://markdown.com.cn)
 
-![APS -w200](/assets/aps-logo.svg "APS logo")
+![APS](/assets/aps-logo.svg "APS logo"){:width="30%"}
 
 [![EPW](/assets/epw-logo.png "EPW" =300x200)](https://docs.epw-code.org/index.html)
 
+图片大小md没有公共用法，一些用法是依赖于图床或预览器的。所以通用一些的方法是用css或直接用html标签
+
+     <img src="./xxx.png" width = "300" height = "200" alt="图片名称" align=center />
+      ![test image size](url){:class="img-responsive"}
+      ![test image size](url){:height="50%" width="50%"}
+      ![test image size](url){:height="100px" width="400px"}
+
+作者：朱凯
+链接：https://www.zhihu.com/question/23378396/answer/234858357
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 ## 上标下标
 
     下标 ：θ~1~ 
