@@ -15,11 +15,13 @@ sitemap: true
 mathjax: true
 author: Leoi
 ---
+<head>
 <style>
 img[src*="#30w"] {
  width: 30%;
 }
-  </style>
+  </style></head>
+  
 ## 标题
 
 n个\#表示n级标题（\# 与标题要有空格）
