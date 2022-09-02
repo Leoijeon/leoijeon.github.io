@@ -15,13 +15,7 @@ sitemap: true
 mathjax: true
 author: Leoi
 ---
-<head>
-<style>
-img[src*="#30w"] {
- width: 30%;
-}
-  </style></head>
-  
+
 ## 标题
 
 n个\#表示n级标题（\# 与标题要有空格）
@@ -162,6 +156,14 @@ See the section on [`code`](#code).
     下标 ：θ~1~ 
     上标 ：θ^2^
     
-θ~1~ 
+有说这个是md自带的，但我用了不行。Jeklly有支持latex的mathjax，但通用一点的方法还是用html标签
 
-θ^2^
+      下标：a<sub>2</sub>
+      上标：a<sup>2</sup>
+      下标：$a_2$
+      上标：$a^2$
+
+下标：a<sub>2</sub>
+上标：a<sup>2</sup>
+下标：$a_2$
+上标：$a^2$
