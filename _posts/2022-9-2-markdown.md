@@ -1,3 +1,6 @@
+img[src*="#30w"] {
+ width: 30%;
+}
 ---
 title:  Markdown 语法总结
 tags: Markdown
@@ -14,10 +17,6 @@ aside:
 sitemap: true
 mathjax: true
 author: Leoi
-
-img[src*="#30w"] {
- width: 30%;
-}
 ---
 ## 标题
 
