@@ -88,8 +88,12 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 # 计算机技术
 
-## Runoob（linux, python, html, java...）
+## Runoob（linux, python, html...）
 
 很方便查询相关命令和语法
 
 <https://www.runoob.com/>
+
+## 个人博客
+
+本网站使用 Jeklly(TeXt) 搭建，更多信息可访问<https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation> 
