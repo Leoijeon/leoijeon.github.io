@@ -15,7 +15,10 @@ sitemap: true
 mathjax: true
 author: Leoi
 ---
-## 标题：n个\#表示n级标题（\# 与标题要有空格）
+## 标题
+
+n个\#表示n级标题（\# 与标题要有空格）
+
 \# 一级
 
 \#\# 二级
@@ -127,3 +130,16 @@ See the section on [`code`](#code).
 ## 图片及链接图片
 	![图片alt](图片链接 "图片title")
 	[![沙漠图片](/assets/img/shiprock.jpg "Shiprock")](https://markdown.com.cn)
+
+![APS](/assets/aps-logo.svg "APS logo")
+
+[![EPW](/assets/epw-logo.png "EPW")](https://docs.epw-code.org/index.html)
+
+## 上标下标
+
+    下标 ：θ~1~ 
+    上标 ：θ^2^
+    
+θ~1~ 
+
+θ^2^
