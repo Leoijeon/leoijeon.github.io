@@ -14,6 +14,10 @@ aside:
 sitemap: true
 mathjax: true
 author: Leoi
+
+img[src*="#30w"] {
+ width: 30%;
+}
 ---
 ## 标题
 
@@ -131,7 +135,7 @@ See the section on [`code`](#code).
 	![图片alt](图片链接 "图片title")
 	[![沙漠图片](/assets/img/shiprock.jpg "Shiprock")](https://markdown.com.cn)
 
-![APS](/assets/aps-logo.svg "APS logo"){:width="30%"}
+![APS](/assets/aps-logo.svg#30w "APS logo")
 
 [![EPW](/assets/epw-logo.png "EPW" =300x200)](https://docs.epw-code.org/index.html)
 
@@ -142,10 +146,11 @@ See the section on [`code`](#code).
       ![test image size](url){:height="50%" width="50%"}
       ![test image size](url){:height="100px" width="400px"}
 
-作者：朱凯
-链接：https://www.zhihu.com/question/23378396/answer/234858357
-来源：知乎
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+      img[src*="#width-full"] {
+      width: 100%;
+      }
+       ![trump.jpg](https://view.moezx.cc/images/2018/05/27/trump.jpg#width-full)
+
 ## 上标下标
 
     下标 ：θ~1~ 
