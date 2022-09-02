@@ -131,9 +131,9 @@ See the section on [`code`](#code).
 	![图片alt](图片链接 "图片title")
 	[![沙漠图片](/assets/img/shiprock.jpg "Shiprock")](https://markdown.com.cn)
 
-![APS](/assets/aps-logo.svg "APS logo")
+![APS](/assets/aps-logo.svg 200x300 "APS logo")
 
-[![EPW](/assets/epw-logo.png "EPW")](https://docs.epw-code.org/index.html)
+[![EPW](/assets/epw-logo.png 200x300 "EPW")](https://docs.epw-code.org/index.html)
 
 ## 上标下标
 
