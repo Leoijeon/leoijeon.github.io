@@ -162,8 +162,12 @@ See the section on [`code`](#code).
       上标：a<sup>2</sup>
       下标：$a_2$
       上标：$a^2$
+html：
 
 下标：a<sub>2</sub>
 上标：a<sup>2</sup>
+
+mathjax：
+
 下标：$a_2$
 上标：$a^2$
