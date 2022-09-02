@@ -81,9 +81,15 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 ## materials cloud 
 
-这个网站有最常用到的晶体处理的工具seekpath，还有qe input生成器，另外还有qe、wannier90 tutorial的一些链接
+这个网站有最常用到的晶体处理的工具seekpath，基于qe计算结果的声子振动可视化，还有qe input生成器，另外还有qe、wannier90 tutorial的一些链接
 
 <https://www.materialscloud.org/work>
+
+<https://interactivephonon.materialscloud.io/> 振动可视化
+
+## 群
+
+<http://www.cryst.ehu.es/>
 
 
 # 计算机技术
