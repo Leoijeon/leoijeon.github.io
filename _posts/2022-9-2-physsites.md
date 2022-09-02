@@ -47,8 +47,10 @@ Review Articles and Tutorials in an Encyclopædic Format
 
 <https://www.cond-mat.de/events>
 
+<https://www.cond-mat.de/events/correl.html>
 
-# 工具类
+
+# 科研工具类
 
 
 ## materials cloud 
@@ -58,5 +60,10 @@ Review Articles and Tutorials in an Encyclopædic Format
 <https://www.materialscloud.org/work>
 
 
+# 计算机技术
 
+## Runoob（linux, python, html, java...）
 
+很方便查询相关命令和语法
+
+<https://www.runoob.com/>
