@@ -125,7 +125,7 @@ Tab缩进即可分层级
 
 ## 超链接
 
-	\[超链接显示名\]\(超链接地址 "超链接title"\)
+	[超链接显示名](超链接地址 "超链接title")
 
 或者直接使用尖括号`<https://www.bing.com>`：<https://www.bing.com>
 
@@ -186,14 +186,16 @@ mathjax：
 下标：$a_2$
 上标：$a^2$
 
+## mathjax
+
+`$\frac{7x+5}{1+y^2}$`
+
+$\frac{7x+5}{1+y^2}$
+
+<https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html>
 ## 任务列表
 
 - [ ] 任务一 未做任务 `- + 空格 + [ ]`
 - [x] 任务二 已做任务 `- + 空格 + [x]`
 
 
-## 公式
-
-`\frac{7x+5}{1+y^2}`
-
-\frac{7x+5}{1+y^2}
