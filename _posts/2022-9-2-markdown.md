@@ -1,5 +1,5 @@
 ---
-title:  Markdown_语法总结
+title:  Markdown 语法总结
 tags: Markdown
 pageview: true
 layout: article
@@ -15,9 +15,6 @@ sitemap: true
 mathjax: true
 author: Leoi
 ---
-Markdown 语法总结
-===============
-
 ## 标题：n个\#表示n级标题（\# 与标题要有空格）
 \# 一级
 
