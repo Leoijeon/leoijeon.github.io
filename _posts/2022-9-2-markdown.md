@@ -133,7 +133,7 @@ See the section on [`code`](#code).
 
 ![APS](/assets/aps-logo.svg 200x300 "APS logo")
 
-[![EPW](/assets/epw-logo.png "EPW" 300x200)](https://docs.epw-code.org/index.html)
+[![EPW](/assets/epw-logo.png "EPW" =300x200)](https://docs.epw-code.org/index.html)
 
 ## 上标下标
 
