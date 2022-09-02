@@ -138,9 +138,11 @@ See the section on [`code`](#code).
 	![图片alt](图片链接 "图片title")
 	[![沙漠图片](/assets/img/shiprock.jpg "Shiprock")](https://markdown.com.cn)
 
-![APS](/assets/aps-logo.svg#30w "APS logo")
+![APS](/assets/aps-logo.svg "APS logo")
 
 [![EPW](/assets/epw-logo.png "EPW" =300x200)](https://docs.epw-code.org/index.html)
+
+<img src="/assets/aps-logo.svg" width = "300" height = "200" />
 
 图片大小md没有公共用法，一些用法是依赖于图床或预览器的。所以通用一些的方法是用css或直接用html标签
 
