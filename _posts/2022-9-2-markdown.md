@@ -13,6 +13,7 @@ aside:
     toc: true
 sitemap: true
 mathjax: true
+mathjax_autoNumber: true
 author: Leoi
 ---
 
@@ -188,11 +189,13 @@ mathjax：
 
 ## mathjax
 
-`$\frac{7x+5}{1+y^2}$`
+也就是加上\$
 
-$\frac{7x+5}{1+y^2}$
+`$\frac{7x+5}{1+y^2}$` $\frac{7x+5}{1+y^2}$
 
 <https://tianqi.name/jekyll-TeXt-theme/post/2017/07/07/mathjax.html>
+
+
 ## 任务列表
 
 - [ ] 任务一 未做任务 `- + 空格 + [ ]`
