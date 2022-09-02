@@ -57,8 +57,34 @@ author: Leoi
 
 有序的加`1. frist`
 
-无序的用\-, \*, \+ 空格后加内容
+  1. First item
+  2. Second item
+  3. Third item
+    1. Indented item
+    2. Indented item
+  5. Fourth item
 
+1. First item
+2. Second item
+3. Third item
+  1. Indented item
+  2. Indented item
+5. Fourth item
+
+无序的用\-, \*, \+ 空格后加内容
+  - First item
+  - Second item
+  - Third item
+      - Indented item
+      - Indented item
+  - Fourth item
+
+- First item
+- Second item
+- Third item
+    - Indented item
+    - Indented item
+- Fourth item
 Tab缩进即可分层级
 
 ## 代码
