@@ -41,7 +41,7 @@ Review Articles and Tutorials in an Encyclopædic Format
 
 <http://web.mit.edu/redingtn/www/netadv/>
 
-## 关联电子暑期学校（Jülich）
+## 关联电子秋季学校（Jülich）
 
 德国于利希研究中心（Forschungszentrum Jülich）是德国亥姆霍兹国家研究中心联合会的下属科研机构。这个网站是他们关联电子方向的一些老师建立，每年暑期办的讲习班的讲义都会高质量地编撰成书，很有参考意义。
 
@@ -49,6 +49,19 @@ Review Articles and Tutorials in an Encyclopædic Format
 
 <https://www.cond-mat.de/events/correl.html>
 
+## School on el-ph from 1st Principles
+
+由 Feliciano Giustino (University of Oxford), Samuel Poncé (University of Oxford), Elena Roxana Margine (Binghamton University-SUNY)等人组织，他们是 QE、EPW 等程序的开发者。因而这个主要围绕 QE、EPW等来讲。
+
+<https://indico.ictp.it/event/8301/speakers>
+
+<https://indico.ictp.it/event/8301/timetable>
+
+## Topo Mat school 
+
+some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei Bernevig, Claudia Felser, Moty Heiblum, Charlie Kane, Joel Moore and Pollmann-Zaletel.
+
+<http://tms19.dipc.org/lecture-notes/index.html>
 
 # 科研工具类
 
