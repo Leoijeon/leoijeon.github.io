@@ -173,7 +173,7 @@ Aflowlib：与ICSD相同的查询方法，选择结构后，晶体对称性操�
 <https://www.latexlive.com/> Latex 公式代码生成器
 
 
-
+<https://1024th.github.io/MathJax_Tutorial_CN/#/> 用于 Markdown 的 Mathjax 的语法
 
 
 
