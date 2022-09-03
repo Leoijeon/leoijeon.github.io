@@ -81,6 +81,9 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 <https://muellergroup.lassp.cornell.edu/Basic_Training_Spring_2013/Field_Theory.html>
 
+-----
+从这往后是一些老师的页面，不一定都有讲义
+
 ### 龚明（ustc 38系）
 
 目录 <http://home.ustc.edu.cn/~gengb/>
@@ -89,15 +92,31 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 凝聚态场论学期 <http://home.ustc.edu.cn/~weixianhao/>
 
-### David Tong
+### David Tong (Cambridge)
 
 佟大为（误）的 teaching 页面，提供了许多他的课程讲义，QM、QFT、Cond-Mat、Stat-Phys，甚至 string theory
 
-### Yeh Nai-Chang
+### Yeh Nai-Chang (葉乃裳 Caltech)
 
 <https://yehgroup.caltech.edu/teaching/summer-course-at-the-national-taiwan-university-2007/>
 
 <https://yehgroup.caltech.edu/teaching/>
+
+### Zahid Hasan (Princeton)
+
+<https://www.physics.princeton.edu/zahidhasangroup/>
+
+### Hugh Osborn (Cambridge, high energy)
+
+<http://www.damtp.cam.ac.uk/user/ho/>
+
+### Nicolas Dupuis (Sorbonne Université)
+
+<https://www.lptmc.jussieu.fr/users/dupuis>
+
+### Martin R. Zirnbauer (Univ. Cologne)
+
+<http://www.thp.uni-koeln.de/zirn/011_Website_Martin_Zirnbauer/3_Teaching/MZ_teaching.html>
 
 # 科研工具类
 
