@@ -1,5 +1,5 @@
 ---
-title: Mathjax数学公式
+title: Mathjax数学公式(由于编译中语法错误，暂不发布)
 tags: Latex
 layout: article
 license: true
