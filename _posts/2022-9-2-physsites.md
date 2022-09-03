@@ -81,8 +81,6 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 <https://muellergroup.lassp.cornell.edu/Basic_Training_Spring_2013/Field_Theory.html>
 
------
-从这往后是一些老师的页面，不一定都有讲义
 
 ### 龚明（ustc 38系）
 
