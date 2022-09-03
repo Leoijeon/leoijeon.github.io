@@ -34,7 +34,10 @@ author: Leoi
 
 <https://sci-hub.se/>
 
-## 前沿物理百科全书
+
+## 知识wiki 
+
+### 前沿物理百科全书
 
 MIT 的一个网站，建于 1995 年，按领域 or 方向英文首字母组织，里面都是比较新的学术论文、评述文章、图书推荐。
 
@@ -44,7 +47,15 @@ Review Articles and Tutorials in an Encyclopædic Format
 
 <http://web.mit.edu/redingtn/www/netadv/>
 
-## 关联电子秋季学校（Jülich）
+### nLab
+
+nLab记录和探索了广泛的数学，物理和哲学。除了具有解释性的工作外，还可以找到大量原始材料，也可以从不断发展的研究中找到笔记。当数学、物理和哲学出现在其他领域，例如计算机科学和语言学领域时，nLab也探索了这些领域。
+
+<https://ncatlab.org/nlab/show/HomePage>
+
+## 讲习班讲义
+
+### 关联电子秋季学校（Jülich）
 
 德国于利希研究中心（Forschungszentrum Jülich）是德国亥姆霍兹国家研究中心联合会的下属科研机构。这个网站是他们关联电子方向的一些老师建立，每年暑期办的讲习班的讲义都会高质量地编撰成书，很有参考意义。
 
@@ -52,7 +63,7 @@ Review Articles and Tutorials in an Encyclopædic Format
 
 <https://www.cond-mat.de/events/correl.html>
 
-## School on el-ph from 1st Principles
+### School on el-ph from 1st Principles (Mar 2018)
 
 由 Feliciano Giustino (University of Oxford), Samuel Poncé (University of Oxford), Elena Roxana Margine (Binghamton University-SUNY)等人组织，他们是 QE、EPW 等程序的开发者。因而这个主要围绕 QE、EPW等来讲。
 
@@ -60,25 +71,44 @@ Review Articles and Tutorials in an Encyclopædic Format
 
 <https://indico.ictp.it/event/8301/timetable>
 
-## Topo Mat school 
+### Topo Mat school (2019)
 
 some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei Bernevig, Claudia Felser, Moty Heiblum, Charlie Kane, Joel Moore and Pollmann-Zaletel.
 
 <http://tms19.dipc.org/lecture-notes/index.html>
 
+### Many body field theory (spring 2013)
+
+<https://muellergroup.lassp.cornell.edu/Basic_Training_Spring_2013/Field_Theory.html>
+
+### 龚明（ustc 38系）
+
+目录 <http://home.ustc.edu.cn/~gengb/>
+
+拓扑相变学期 <http://home.ustc.edu.cn/~lxsphys/index.html>
+
+凝聚态场论学期 <http://home.ustc.edu.cn/~weixianhao/>
+
+### David Tong
+
+佟大为（误）的 teaching 页面，提供了许多他的课程讲义，QM、QFT、Cond-Mat、Stat-Phys，甚至 string theory
+
+### Yeh Nai-Chang
+
+<https://yehgroup.caltech.edu/teaching/summer-course-at-the-national-taiwan-university-2007/>
+
+<https://yehgroup.caltech.edu/teaching/>
+
 # 科研工具类
 
-
-一些我用计算软件
-
-- VASP
-- QE
+- VASP <https://www.vasp.at/wiki/index.php/The_VASP_Manual>
+- QE <https://www.quantum-espresso.org/documentation/>
 - Wannier90
-- WannierTools
+- WannierTools <http://www.wanniertools.com/>
 - Paoflow
 - Linear response symmetry
-- EPW
-- SCTK
+- EPW <https://docs.epw-code.org/doc/Inputs.html>
+- SCTK <https://sctk.osdn.jp/en/_build/html/index.html>
 - wien2k
 
 
@@ -90,10 +120,19 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 <https://interactivephonon.materialscloud.io/> 振动可视化
 
-## 群
+## 群、对称性
+
+Bilbao 晶体学服务器：空间群、磁对称性、表示、固体物理中的应用······
 
 <http://www.cryst.ehu.es/>
 
+<https://www.cryst.ehu.es/cgi-bin/cryst/programs/nph-getgen>
+
+Aflowlib：与ICSD相同的查询方法，选择结构后，晶体对称性操作可以可视化，还提供了DFT计算的能带与dos
+
+<http://www.aflowlib.org/search/> 
+
+<>
 
 # 计算机技术
 
@@ -106,3 +145,19 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 ## 个人博客
 
 本网站使用 Jeklly(TeXt) 搭建，更多信息可访问<https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation> 
+
+## Latex
+
+<http://latexcolor.com/> Latex color
+
+
+<https://www.latexlive.com/> Latex 公式代码生成器
+
+
+
+
+
+
+
+
+
