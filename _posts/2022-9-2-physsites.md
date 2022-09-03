@@ -96,6 +96,8 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 佟大为（误）的 teaching 页面，提供了许多他的课程讲义，QM、QFT、Cond-Mat、Stat-Phys，甚至 string theory
 
+<http://www.damtp.cam.ac.uk/user/tong/teaching.html>
+
 ### Yeh Nai-Chang (葉乃裳 Caltech)
 
 <https://yehgroup.caltech.edu/teaching/summer-course-at-the-national-taiwan-university-2007/>
@@ -151,7 +153,6 @@ Aflowlib：与ICSD相同的查询方法，选择结构后，晶体对称性操�
 
 <http://www.aflowlib.org/search/> 
 
-<>
 
 # 计算机技术
 
@@ -163,7 +164,7 @@ Aflowlib：与ICSD相同的查询方法，选择结构后，晶体对称性操�
 
 ## 个人博客
 
-本网站使用 Jeklly(TeXt) 搭建，更多信息可访问<https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation> 
+本网站使用 Jeklly(TeXt Theme) 搭建，更多信息可访问<https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation> 
 
 ## Latex
 
