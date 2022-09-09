@@ -26,7 +26,7 @@ author: 转载
 <h2 id="N10093"><span style="color: rgba(0, 128, 128, 1)">一、生成Makefile流程图</span><button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
 <p><img src="/assets/makefile.png" alt="" class="medium-zoom-image"></p>
 <p>&nbsp;</p>
-<h2><span style="color: rgba(0, 128, 128, 1)">二、具体实例</span><button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<h2 id="N10094"><span style="color: rgba(0, 128, 128, 1)">二、具体实例</span><button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
 <p>　　执行命令顺序：autoscan;&nbsp;aclocal; autoconf; autoheader;&nbsp;automake --add-missing; ./configure; make; ./helloworld;</p>
 <h3>1、建目录<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
 <p>　　在你的工作目录下建一个helloworld目录，用来存放helloworld程序及相关文件，如在/home/my/build下：</p>
@@ -187,7 +187,7 @@ Hello World</span>!!!!</pre>
 </div>
 <p>　　这样helloworld就编译出来了，你如果按上面的步骤来做的话，应该也会很容易地编译出正确的helloworld文件。你还可以试着使用一些其他的make命令，如make clean，make install，make dist，看看它们会给你什么样的效果。感觉如何？自己也能写出这么专业的Makefile，老板一定会对你刮目相看。</p>
 <p>&nbsp;</p>
-<h2><span style="color: rgba(0, 128, 128, 1)">三、命令详解<em id="__mceDel">&nbsp;</em></span><button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
+<h2 id="N10095"><span style="color: rgba(0, 128, 128, 1)">三、命令详解<em id="__mceDel">&nbsp;</em></span><button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h2>
 <h3>1、&nbsp;autoscan<button class="cnblogs-toc-button" title="显示目录导航" aria-expanded="false"></button></h3>
 <p>　　autoscan是用来扫描源代码目录生成configure.scan文件的。autoscan可以用目录名做为参数，但如果你不使用参数的话，那么autoscan将认为使用的是当前目录。autoscan将扫描你所指定目录中的源文件，并创建configure.scan文件。</p>
 <p>&nbsp;</p>
