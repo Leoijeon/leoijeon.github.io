@@ -110,6 +110,9 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 <http://www.damtp.cam.ac.uk/user/ho/>
 
+### Andreas Schnyder (Max Planck Institute)
+<https://www.fkf.mpg.de/556169/20_Schnyder>
+
 ### Nicolas Dupuis (Sorbonne Université)
 
 <https://www.lptmc.jussieu.fr/users/dupuis>
