@@ -168,6 +168,12 @@ Aflowlib：与ICSD相同的查询方法，选择结构后，晶体对称性操�
 
 <http://www.aflowlib.org/search/> 
 
+## Academic Phrasebank
+
+The Academic Phrasebank is a general resource for academic writers. It makes explicit the more common phraseological ‘nuts and bolts’ of academic writing.
+
+<https://phrasebankresearch.net/>
+
 
 # 计算机技术
 
