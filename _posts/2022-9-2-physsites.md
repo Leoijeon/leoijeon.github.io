@@ -194,7 +194,7 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 
 ## 温州大学机器学习课件
 
-https://github.com/fengdu78/WZU-machine-learning-course
+<https://github.com/fengdu78/WZU-machine-learning-course>
 
 ## 个人博客
 
