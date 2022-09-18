@@ -177,6 +177,10 @@ Aflowlib：与ICSD相同的查询方法，选择结构后，晶体对称性操�
 
 <https://www.runoob.com/>
 
+## 温州大学机器学习课件
+
+https://github.com/fengdu78/WZU-machine-learning-course
+
 ## 个人博客
 
 本网站使用 Jeklly(TeXt Theme) 搭建，更多信息可访问<https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation> 
