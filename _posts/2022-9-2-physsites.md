@@ -181,11 +181,17 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 
 # 计算机技术
 
-## Developer Roadmap
+## 学习路径类 
+
+### Code interview university
+
+<https://github.com/Leoijeon/coding-interview-university/blob/main/translations/README-cn.md>
+
+### Developer Roadmap
 
 <https://roadmap.sh/>
 
-## Runoob（linux, python, html...）
+### Runoob（linux, python, html...）
 
 很方便查询相关命令和语法
 
