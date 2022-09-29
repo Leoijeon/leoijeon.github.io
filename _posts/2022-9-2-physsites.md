@@ -223,6 +223,7 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 
 ## Unclassified 
 <https://www.captainai.net/2018/11/18/whatisnn/> 人工智能
+<https://the-algorithms.com/zh_Hans> 算法仓库
 
 
 
