@@ -204,6 +204,7 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 
 ## Fortran90
 <https://www.fortran90.org/index.html>
+<https://web.stanford.edu/class/me200c/tutorial_90/>
 
 ## 温州大学机器学习课件
 
