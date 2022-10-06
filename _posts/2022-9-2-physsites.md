@@ -230,7 +230,7 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 
 <https://the-algorithms.com/zh_Hans> 算法仓库
 
-<https://archiveweb.page/> 一个chrome/chromium浏览器可用的页面录制工具，可完美保存网页，保存格式为.warc，可在插件内或<https://ReplayWeb.page>页面查看
+<https://archiveweb.page/> 一个chrome/chromium浏览器可用的页面录制工具，可完美保存网页，保存格式为.warc，可在插件内或<https://ReplayWeb.page>页面查看。可与订阅配置文件搭配食用<https://leoijeon.github.io/assets/RSS-subscriptions.opml>（凝聚态相关期刊）
 
 <https://github.com/nkanaev/yarr> 一款很好用的RSS阅读器，基于go语言，作为本地服务，在浏览器内使用
 
