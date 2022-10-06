@@ -63,12 +63,13 @@ nLab记录和探索了广泛的数学，物理和哲学。除了具有解释性�
 
 ### 关联电子秋季学校（Jülich）
 
-德国于利希研究中心（Forschungszentrum Jülich）是德国亥姆霍兹国家研究中心联合会的下属科研机构。这个网站是他们关联电子方向的一些老师建立，每年暑期办的讲习班的讲义都会高质量地编撰成书，很有参考意义。(这个讲习班的讲义我都下载了，想省时间点的可以找我要)
+德国于利希研究中心（Forschungszentrum Jülich）是德国亥姆霍兹国家研究中心联合会的下属科研机构。这个网站是他们关联电子方向的一些老师建立，每年暑期办的讲习班的讲义都会高质量地编撰成书，很有参考意义。
 
 <https://www.cond-mat.de/events>
 
 <https://www.cond-mat.de/events/correl.html>
 
+<https://sa44y7y1uf.feishu.cn/docs/doccnW9ef1nv6cB3Jqtt1ZsjPve?from=from_copylink>
 ### School on el-ph from 1st Principles (Mar 2018)
 
 由 Feliciano Giustino (University of Oxford), Samuel Poncé (University of Oxford), Elena Roxana Margine (Binghamton University-SUNY)等人组织，他们是 QE、EPW 等程序的开发者。因而这个主要围绕 QE、EPW等来讲。
