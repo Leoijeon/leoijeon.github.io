@@ -187,7 +187,15 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 
 # 计算机
 
-## 学习路径类 
+## 编程学习
+
+### Latex
+
+<http://latexcolor.com/> Latex color
+
+<https://www.latexlive.com/> Latex 公式代码生成器
+
+<https://1024th.github.io/MathJax_Tutorial_CN/#/> 用于 Markdown 的 Mathjax 的语法
 
 ### Code interview university
 
@@ -203,36 +211,33 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 
 <https://www.runoob.com/>
 
-## Fortran90
+### Fortran90
 <https://www.fortran90.org/index.html>
+
 <https://web.stanford.edu/class/me200c/tutorial_90/>
 
-## 温州大学机器学习课件
+## 杂项
+
+### 温州大学机器学习课件
 
 <https://github.com/fengdu78/WZU-machine-learning-course>
 
-## 个人博客
+### 个人博客
 
 本网站使用 Jeklly(TeXt Theme) 搭建，更多信息可访问<https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation> 
 
-## Latex
 
-<http://latexcolor.com/> Latex color
-
-
-<https://www.latexlive.com/> Latex 公式代码生成器
+### RSS 
+<https://github.com/nkanaev/yarr> 一款很好用的RSS阅读器，基于go语言，作为本地服务，在浏览器内使用。可与订阅配置文件搭配食用<https://leoijeon.github.io/assets/RSS-subscriptions.opml>（凝聚态相关期刊）
 
 
-<https://1024th.github.io/MathJax_Tutorial_CN/#/> 用于 Markdown 的 Mathjax 的语法
-
-## Unclassified 
+### Unclassified 
 <https://www.captainai.net/2018/11/18/whatisnn/> 人工智能
 
 <https://the-algorithms.com/zh_Hans> 算法仓库
 
-<https://archiveweb.page/> 一个chrome/chromium浏览器可用的页面录制工具，可完美保存网页，保存格式为.warc，可在插件内或<https://ReplayWeb.page>页面查看。可与订阅配置文件搭配食用<https://leoijeon.github.io/assets/RSS-subscriptions.opml>（凝聚态相关期刊）
+<https://archiveweb.page/> 一个chrome/chromium浏览器可用的页面录制工具，可完美保存网页，保存格式为.warc，可在插件内或<https://ReplayWeb.page>页面查看
 
-<https://github.com/nkanaev/yarr> 一款很好用的RSS阅读器，基于go语言，作为本地服务，在浏览器内使用
 
 
 
