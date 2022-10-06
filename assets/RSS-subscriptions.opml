@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.1">
+<head><title>subscriptions</title></head>
+<body>
+  <outline text="AIP">
+    <outline type="rss" text="Applied Physics Letters: All Topics" xmlUrl="http://aip.scitation.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=apl" htmlUrl="https://aip.scitation.org/loi/apl?af=R&amp;feed=most-recent"/>
+    <outline type="rss" text="Journal of Applied Physics: All Topics" xmlUrl="http://aip.scitation.org/action/showFeed?type=etoc&amp;feed=rss&amp;jc=jap" htmlUrl="https://aip.scitation.org/loi/jap?af=R&amp;feed=most-recent"/>
+  </outline>
+  <outline text="APS and some">
+    <outline type="rss" text="Nature Physics - Issue - nature.com science feeds" xmlUrl="http://feeds.nature.com/nphys/rss/current" htmlUrl="http://feeds.nature.com/nphys/rss/current"/>
+    <outline type="rss" text="npj Quantum Materials - nature.com science feeds" xmlUrl="http://feeds.nature.com/npjquantmats/rss/current" htmlUrl="http://feeds.nature.com/npjquantmats/rss/current"/>
+    <outline type="rss" text="PRB Editors&#39; Suggestions" xmlUrl="http://feeds.aps.org/rss/prbsuggestions.xml" htmlUrl="http://journals.aps.org/prb/"/>
+    <outline type="rss" text="PRL: Condensed Matter: Electronic Properties, etc." xmlUrl="http://feeds.aps.org/rss/tocsec/PRL-CondensedMatterElectronicPropertiesetc.xml" htmlUrl="http://journals.aps.org/prl/"/>
+    <outline type="rss" text="PRL: Condensed Matter: Structure, etc." xmlUrl="http://feeds.aps.org/rss/tocsec/PRL-CondensedMatterStructureetc.xml" htmlUrl="http://journals.aps.org/prl/"/>
+    <outline type="rss" text="Recent Articles in Phys. Rev. B" xmlUrl="http://feeds.aps.org/rss/recent/prb.xml" htmlUrl="http://journals.aps.org/prb/"/>
+    <outline type="rss" text="Recent Articles in Rev. Mod. Phys." xmlUrl="http://feeds.aps.org/rss/recent/rmp.xml" htmlUrl="http://journals.aps.org/rmp/"/>
+  </outline>
+  <outline text="arxiv">
+    <outline type="rss" text="cond-mat updates on arXiv.org" xmlUrl="http://export.arxiv.org/rss/cond-mat" htmlUrl="http://arxiv.org/"/>
+  </outline>
+  <outline text="IOP">
+    <outline type="rss" text="Chinese Physics Letters - latest papers" xmlUrl="https://iopscience.iop.org/journal/rss/0256-307X" htmlUrl="http://iopscience.iop.org/journal/rss/0256-307X"/>
+    <outline type="rss" text="European Journal of Physics - latest papers" xmlUrl="https://iopscience.iop.org/journal/rss/0143-0807" htmlUrl="http://iopscience.iop.org/journal/rss/0143-0807"/>
+    <outline type="rss" text="Journal of Physics D: Applied Physics - latest papers" xmlUrl="https://iopscience.iop.org/journal/rss/0022-3727" htmlUrl="http://iopscience.iop.org/journal/rss/0022-3727"/>
+    <outline type="rss" text="Journal of Physics: Condensed Matter - latest papers" xmlUrl="https://iopscience.iop.org/journal/rss/0953-8984" htmlUrl="http://iopscience.iop.org/journal/rss/0953-8984"/>
+    <outline type="rss" text="New Journal of Physics - latest papers" xmlUrl="https://iopscience.iop.org/journal/rss/1367-2630" htmlUrl="http://iopscience.iop.org/journal/rss/1367-2630"/>
+  </outline>
+  <outline text="Nature">
+    <outline type="rss" text="Nature - Issue - nature.com science feeds" xmlUrl="http://feeds.nature.com/nature/rss/current" htmlUrl="http://feeds.nature.com/nature/rss/current"/>
+    <outline type="rss" text="Nature Communications - current - nature.com science feeds" xmlUrl="http://feeds.nature.com/ncomms/rss/current" htmlUrl="http://feeds.nature.com/ncomms/rss/current"/>
+    <outline type="rss" text="Nature Materials - Issue - nature.com science feeds" xmlUrl="http://feeds.nature.com/nmat/rss/current" htmlUrl="http://feeds.nature.com/nmat/rss/current"/>
+    <outline type="rss" text="Nature Nanotechnology - Issue - nature.com science feeds" xmlUrl="http://feeds.nature.com/nnano/rss/current" htmlUrl="http://feeds.nature.com/nnano/rss/current"/>
+    <outline type="rss" text="npj 2D Materials and Applications - nature.com science feeds" xmlUrl="http://feeds.nature.com/npj2dmaterials/rss/current" htmlUrl="http://feeds.nature.com/npj2dmaterials/rss/current"/>
+    <outline type="rss" text="npj Computational Materials - nature.com science feeds" xmlUrl="http://feeds.nature.com/npjcompumats/rss/current" htmlUrl="http://feeds.nature.com/npjcompumats/rss/current"/>
+  </outline>
+  <outline text="Science">
+    <outline type="rss" text="Science Advances current issue" xmlUrl="http://advances.sciencemag.org/rss/current.xml" htmlUrl="https://www.science.org/journal/sciadv"/>
+    <outline type="rss" text="Science: Current Issue" xmlUrl="http://www.sciencemag.org/rss/current.xml" htmlUrl="https://www.science.org/journal/science"/>
+  </outline>
+  <outline text="ScienceDirect">
+    <outline type="rss" text="Physics Reports" xmlUrl="http://rss.sciencedirect.com/publication/science/03701573" htmlUrl="https://www.sciencedirect.com/journal/physics-reports"/>
+    <outline type="rss" text="ScienceDirect Publication: Journal of Magnetism and Magnetic Materials" xmlUrl="http://rss.sciencedirect.com/publication/science/03048853" htmlUrl="https://www.sciencedirect.com/journal/journal-of-magnetism-and-magnetic-materials"/>
+    <outline type="rss" text="ScienceDirect Publication: Materials Letters" xmlUrl="http://rss.sciencedirect.com/publication/science/0167577X" htmlUrl="https://www.sciencedirect.com/journal/materials-letters"/>
+    <outline type="rss" text="ScienceDirect Publication: Physica B: Condensed Matter" xmlUrl="http://rss.sciencedirect.com/publication/science/09214526" htmlUrl="https://www.sciencedirect.com/journal/physica-b-condensed-matter"/>
+    <outline type="rss" text="ScienceDirect Publication: Physica C: Superconductivity" xmlUrl="http://rss.sciencedirect.com/publication/science/09214534" htmlUrl="https://www.sciencedirect.com/journal/physica-c-superconductivity-and-its-applications"/>
+    <outline type="rss" text="ScienceDirect Publication: Solid State Communications" xmlUrl="http://rss.sciencedirect.com/publication/science/03759601" htmlUrl="https://www.sciencedirect.com/journal/physics-letters-a"/>
+  </outline>
+</body>
+</opml>
