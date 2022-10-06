@@ -17,6 +17,7 @@ mathjax_autoNumber: true
 author: Leoi
 ---
 本页面可通过点击导航栏的书签（Bookmark）进入。
+电脑端访问有侧栏目录。
 
 ------------------
 
