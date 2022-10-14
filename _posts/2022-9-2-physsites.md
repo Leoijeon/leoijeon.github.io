@@ -145,7 +145,7 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 ### 一些收藏的链接
 <https://www.douban.com/doulist/38034409/?start=0&sort=seq&playable=0&sub_type=> 凝聚态理论代表书籍推荐
-
+<https://www.springer.com/series/8790/books> Springer Outstanding Ph.D. Theses
 # 科研工具类
 
 ## 计算软件
