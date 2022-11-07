@@ -147,7 +147,8 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 <https://www.douban.com/doulist/38034409/?start=0&sort=seq&playable=0&sub_type=> 凝聚态理论代表书籍推荐
 <https://www.springer.com/series/8790/books> Springer Outstanding Ph.D. Theses
 <https://phas.ubc.ca/~berciu/> Mona Berciu (Uni. of British Columbia)
-
+<https://qzhu2017.github.io/courses/> computational lab of Prof. Qiang Zhu (Uni. Nevada, Las vegas)
+<http://www-personal.umich.edu/~mejn/cp/index.html> computational physics textbook and codes
 
 # 科研工具类
 
