@@ -62,7 +62,6 @@ nLab记录和探索了广泛的数学，物理和哲学。除了具有解释性�
 ## 讲习班讲义
 
 ### 关联电子秋季学校（Jülich）
-
 德国于利希研究中心（Forschungszentrum Jülich）是德国亥姆霍兹国家研究中心联合会的下属科研机构。这个网站是他们关联电子方向的一些老师建立，每年暑期办的讲习班的讲义都会高质量地编撰成书，很有参考意义。
 
 <https://www.cond-mat.de/events>
@@ -70,8 +69,8 @@ nLab记录和探索了广泛的数学，物理和哲学。除了具有解释性�
 <https://www.cond-mat.de/events/correl.html>
 
 <https://sa44y7y1uf.feishu.cn/docs/doccnW9ef1nv6cB3Jqtt1ZsjPve?from=from_copylink>
-### School on el-ph from 1st Principles (Mar 2018)
 
+### School on el-ph from 1st Principles (Mar 2018)
 由 Feliciano Giustino (University of Oxford), Samuel Poncé (University of Oxford), Elena Roxana Margine (Binghamton University-SUNY)等人组织，他们是 QE、EPW 等程序的开发者。因而这个主要围绕 QE、EPW等来讲。
 
 <https://indico.ictp.it/event/8301/speakers>
@@ -79,24 +78,20 @@ nLab记录和探索了广泛的数学，物理和哲学。除了具有解释性�
 <https://indico.ictp.it/event/8301/timetable>
 
 ### Online course on topology in condensed matter
-
 mainly contributed by TU Delft professors
 
 <https://topocondmat.org/index.html>
 
 ### Topo Mat school (2019)
-
 some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei Bernevig, Claudia Felser, Moty Heiblum, Charlie Kane, Joel Moore and Pollmann-Zaletel.
 
 <http://tms19.dipc.org/lecture-notes/index.html>
 
 ### Many body field theory (spring 2013)
-
 <https://muellergroup.lassp.cornell.edu/Basic_Training_Spring_2013/Field_Theory.html>
 
 
 ### 龚明（ustc 38系）
-
 目录 <http://home.ustc.edu.cn/~gengb/>
 
 拓扑相变学期 <http://home.ustc.edu.cn/~lxsphys/index.html>
@@ -107,43 +102,37 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 主页有一些课程笔记（比较整齐）和链接
 <http://www.physics.rutgers.edu/~coleman/>
 
-### David Tong (Cambridge)
+##一些收藏的主页和杂项
 
+### David Tong (Cambridge)
 佟大为（误）的 teaching 页面，提供了许多他的课程讲义，QM、QFT、Cond-Mat、Stat-Phys，甚至 string theory
 
 <http://www.damtp.cam.ac.uk/user/tong/teaching.html>
 
 ### Yeh Nai-Chang (葉乃裳 Caltech)
-
 <https://yehgroup.caltech.edu/teaching/summer-course-at-the-national-taiwan-university-2007/>
 
 <https://yehgroup.caltech.edu/teaching/>
 
 ### Zahid Hasan (Princeton)
-
 <https://www.physics.princeton.edu/zahidhasangroup/>
 
 ### Hugh Osborn (Cambridge, high energy)
-
 <http://www.damtp.cam.ac.uk/user/ho/>
 
 ### Andreas Schnyder (Max Planck Institute)
 <https://www.fkf.mpg.de/556169/20_Schnyder>
 
 ### Nicolas Dupuis (Sorbonne Université)
-
 <https://www.lptmc.jussieu.fr/users/dupuis>
 
 ### Martin R. Zirnbauer (Univ. Cologne)
-
 <http://www.thp.uni-koeln.de/zirn/011_Website_Martin_Zirnbauer/3_Teaching/MZ_teaching.html>
-
-## 其他
 
 ### Journal Club of Condensed Matter Physics
 <https://www.condmatjclub.org> 每月精选凝聚态物理文章，并有评论。可邮件订阅
 
-### 一些收藏的链接
+## 其他
 
 <https://www.douban.com/doulist/38034409/?start=0&sort=seq&playable=0&sub_type=> 凝聚态理论代表书籍推荐
 
