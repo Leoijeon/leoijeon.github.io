@@ -132,7 +132,7 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 ### Journal Club of Condensed Matter Physics
 <https://www.condmatjclub.org> 每月精选凝聚态物理文章，并有评论。可邮件订阅
 
-## 其他
+### 其他
 
 <https://www.douban.com/doulist/38034409/?start=0&sort=seq&playable=0&sub_type=> 凝聚态理论代表书籍推荐
 
