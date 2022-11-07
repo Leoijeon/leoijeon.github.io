@@ -102,7 +102,7 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 主页有一些课程笔记（比较整齐）和链接
 <http://www.physics.rutgers.edu/~coleman/>
 
-##一些收藏的主页和杂项
+## 一些收藏的主页和杂项
 
 ### David Tong (Cambridge)
 佟大为（误）的 teaching 页面，提供了许多他的课程讲义，QM、QFT、Cond-Mat、Stat-Phys，甚至 string theory
