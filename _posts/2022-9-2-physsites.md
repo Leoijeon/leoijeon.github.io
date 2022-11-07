@@ -142,7 +142,7 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 
 <https://qzhu2017.github.io/courses/> computational lab of Prof. Qiang Zhu (Uni. Nevada, Las vegas)
 
-<http://www-personal.umich.edu/~mejn/cp/index.html> computational physics textbook and [codes](/assets/cpresources.zip)
+<http://www-personal.umich.edu/~mejn/cp/index.html> computational physics textbook, [exercises](/assets/cpexercises.zip) and [codes](/assets/cpresources.zip)
 
 # 科研工具类
 
