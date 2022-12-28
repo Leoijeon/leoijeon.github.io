@@ -36,7 +36,7 @@ author: Leoi
 <https://sci-hub.se/>
 
 ## ProQuest
-国外博士论文检索
+<https://www.proquest.com/> 国外博士论文检索。建议用学校ip访问，尤其学校买了PQDT数据库的。
 
 ## 知识wiki 
 
