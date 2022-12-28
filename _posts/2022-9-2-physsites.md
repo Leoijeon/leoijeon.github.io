@@ -35,6 +35,8 @@ author: Leoi
 
 <https://sci-hub.se/>
 
+## ProQuest
+国外博士论文检索
 
 ## 知识wiki 
 
