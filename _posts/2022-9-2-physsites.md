@@ -237,7 +237,7 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 
 <https://archiveweb.page/> 一个chrome/chromium浏览器可用的页面录制工具，可完美保存网页，保存格式为.warc，可在插件内或<https://ReplayWeb.page>页面查看
 
-<https://pandoc.org/> 文档格式转换（命令行工具）。可以在 .docx、.tex、.rtf、.md、.ipynb、.epub、.html 等格式之间互相转换，但这个软件也并不是完美的，有些特殊语句在转换后需要手动修改。一个例子：将docx文件转换为tex`pandoc.exe -f docx -t latex filename.docx`
+<https://pandoc.org/> 文档格式转换（命令行工具）。可以在 .docx、.tex、.rtf、.md、.ipynb、.epub、.html 等格式之间互相转换，但这个软件也并不是完美的，有些特殊语句在转换后需要手动修改。一个例子：将latex文件转换为markdown文件，输出文件为doc.md`pandoc.exe -f latex -t markdown document.tex -o doc.md`
 
 
  
