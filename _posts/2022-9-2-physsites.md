@@ -35,8 +35,12 @@ author: Leoi
 
 <https://sci-hub.se/>
 
-## ProQuest
+## 国外硕博论文
+国外硕博论文有许多质量不错，有参考价值的。一般 google 关键词+dissertation 可以找到。这里另外介绍两个网站：
+
 <https://www.proquest.com/> 国外博士论文检索。建议用学校ip访问，尤其学校买了PQDT数据库的。
+
+<https://www.springer.com/series/8790/books> Springer Outstanding Ph.D. Theses（Springer 出版的优秀论文，都是精品）
 
 ## 知识wiki 
 
@@ -140,8 +144,6 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 ### 其他
 
 <https://www.douban.com/doulist/38034409/?start=0&sort=seq&playable=0&sub_type=> 凝聚态理论代表书籍推荐
-
-<https://www.springer.com/series/8790/books> Springer Outstanding Ph.D. Theses
 
 <https://phas.ubc.ca/~berciu/> Mona Berciu (Uni. of British Columbia)
 
