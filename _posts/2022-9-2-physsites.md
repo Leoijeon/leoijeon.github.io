@@ -237,7 +237,7 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 
 
 ### RSS 
-<https://github.com/nkanaev/yarr> 一款很好用的RSS[阅读器](https://leoijeon.github.io/assets/yarr.exe)，基于go语言，作为本地服务，在浏览器内使用。
+<https://github.com/nkanaev/yarr> 一款很好用的RSS[阅读器](https://leoijeon.github.io/assets/yarr.exe)，基于go语言，作为本地服务，在浏览器内使用(127.0.0.1:7070)。
 
 可与订阅配置文件搭配食用<https://leoijeon.github.io/assets/RSS-subscriptions.opml>（凝聚态相关期刊）
 
