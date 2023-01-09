@@ -190,7 +190,6 @@ Aflowlib：与ICSD相同的查询方法，选择结构后，晶体对称性操�
 ### Academic Phrasebank
 
 The Academic Phrasebank is a general resource for academic writers. It makes explicit the more common phraseological ‘nuts and bolts’ of academic writing.
-
 <https://phrasebankresearch.net/>
 
 ### Duke Graduate School Scientific Writing Resource
@@ -208,49 +207,37 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 
 <https://1024th.github.io/MathJax_Tutorial_CN/#/> 用于 Markdown 的 Mathjax 的语法
 
-### Code interview university
-
-<https://github.com/Leoijeon/coding-interview-university/blob/main/translations/README-cn.md>
-
-### Developer Roadmap
-
-<https://roadmap.sh/>
-
-### Runoob（linux, python, html...）
-
-很方便查询相关命令和语法
-
-<https://www.runoob.com/>
-
 ### Fortran90
 <https://www.fortran90.org/index.html>
 
 <https://web.stanford.edu/class/me200c/tutorial_90/>
 
+### 其他
+<https://www.runoob.com/> 很方便查询相关命令和语法（linux, python, html...）
+
+<https://github.com/Leoijeon/coding-interview-university/blob/main/translations/README-cn.md>  Code interview university
+
+<https://github.com/fengdu78/WZU-machine-learning-course> 温州大学机器学习课件
+
+<https://www.captainai.net/2018/11/18/whatisnn/> 人工智能
+
+<https://the-algorithms.com/zh_Hans> 算法仓库
+
+<https://roadmap.sh/> Developer roadmap
+
 ## 杂项
-
-### 温州大学机器学习课件
-
-<https://github.com/fengdu78/WZU-machine-learning-course>
 
 ### 个人博客
 
 本网站使用 Jeklly(TeXt Theme) 搭建，更多信息可访问<https://tianqi.name/jekyll-TeXt-theme/docs/en/navigation> 
 
+### 很有用的小工具
 
-### RSS 
-<https://github.com/nkanaev/yarr> 一款很好用的RSS[阅读器](https://leoijeon.github.io/assets/yarr.exe)，基于go语言，作为本地服务，在浏览器内使用(打开 127.0.0.1:7070)。
-
-可与订阅配置文件搭配食用<https://leoijeon.github.io/assets/RSS-subscriptions.opml>（凝聚态相关期刊）
-
-
-### Unclassified 
-<https://www.captainai.net/2018/11/18/whatisnn/> 人工智能
-
-<https://the-algorithms.com/zh_Hans> 算法仓库
+日常阅读最新文献可以用邮件或RSS订阅。推荐一款一款很好用的RSS[阅读器](https://leoijeon.github.io/assets/yarr.exe)，官网<https://github.com/nkanaev/yarr> ，基于go语言，作为本地服务，在浏览器内使用(打开 127.0.0.1:7070)。可与订阅配置文件搭配食用<https://leoijeon.github.io/assets/RSS-subscriptions.opml>（里面是凝聚态相关期刊）
 
 <https://archiveweb.page/> 一个chrome/chromium浏览器可用的页面录制工具，可完美保存网页，保存格式为.warc，可在插件内或<https://ReplayWeb.page>页面查看
 
+<https://pandoc.org/> 文档格式转换（命令行工具）。可以在 .docx、.tex、.rtf、.md、.ipynb、.epub、.html 等格式之间互相转换，但这个软件也并不是完美的，有些特殊语句在转换后需要手动修改。一个例子：将docx文件转换为tex`pandoc.exe -f docx -t latex filename.docx`
 
 
-
+ 
