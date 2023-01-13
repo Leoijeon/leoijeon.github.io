@@ -96,7 +96,6 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 ### Many body field theory (spring 2013)
 <https://muellergroup.lassp.cornell.edu/Basic_Training_Spring_2013/Field_Theory.html>
 
-
 ### 龚明（ustc 38系）
 目录 <http://home.ustc.edu.cn/~gengb/>
 
@@ -108,48 +107,40 @@ some Lecture notes on this website, given by Alex Altland, Jennifer Cano, Andrei
 主页有一些课程笔记（比较整齐）和链接
 <http://www.physics.rutgers.edu/~coleman/>
 
-## 一些收藏的主页和杂项
-
 ### David Tong (Cambridge)
-佟大为（误）的 teaching 页面，提供了许多他的课程讲义，QM、QFT、Cond-Mat、Stat-Phys，甚至 string theory
-
-<http://www.damtp.cam.ac.uk/user/tong/teaching.html>
-
-### Yeh Nai-Chang (葉乃裳 Caltech)
-<https://yehgroup.caltech.edu/teaching/summer-course-at-the-national-taiwan-university-2007/>
-
-<https://yehgroup.caltech.edu/teaching/>
+<http://www.damtp.cam.ac.uk/user/tong/teaching.html>   佟大为（误）的 teaching 页面，提供了许多他的课程讲义，QM、QFT、Cond-Mat、Stat-Phys，甚至 string theory
 
 ### Zahid Hasan (Princeton)
 <https://www.physics.princeton.edu/zahidhasangroup/>
 
-### Hugh Osborn (Cambridge, high energy)
-<http://www.damtp.cam.ac.uk/user/ho/>
-
 ### Andreas Schnyder (Max Planck Institute)
 <https://www.fkf.mpg.de/556169/20_Schnyder>
-
-### Nicolas Dupuis (Sorbonne Université)
-<https://www.lptmc.jussieu.fr/users/dupuis>
-
-### Martin R. Zirnbauer (Univ. Cologne)
-<http://www.thp.uni-koeln.de/zirn/011_Website_Martin_Zirnbauer/3_Teaching/MZ_teaching.html>
-
-### Kam Tuen Law (HKUST)
-<https://phlaw.ust.hk/group-members>
 
 ### Journal Club of Condensed Matter Physics
 <https://www.condmatjclub.org> 每月精选凝聚态物理文章，并有评论。可邮件订阅
 
+### 凝聚态书籍推荐
+<https://www.douban.com/doulist/38034409/?start=0&sort=seq&playable=0&sub_type=>
+
 ### 其他
 
-<https://www.douban.com/doulist/38034409/?start=0&sort=seq&playable=0&sub_type=> 凝聚态理论代表书籍推荐
+Hugh Osborn (Cambridge, high energy) <http://www.damtp.cam.ac.uk/user/ho/> 
 
-<https://phas.ubc.ca/~berciu/> Mona Berciu (Uni. of British Columbia)
+Nicolas Dupuis (Sorbonne Université) <https://www.lptmc.jussieu.fr/users/dupuis> 
 
-<https://qzhu2017.github.io/courses/> computational lab of Prof. Qiang Zhu (Uni. Nevada, Las vegas)
+Yeh Nai-Chang (葉乃裳 Caltech) <https://yehgroup.caltech.edu/teaching/summer-course-at-the-national-taiwan-university-2007/> 
 
-<http://www-personal.umich.edu/~mejn/cp/index.html> computational physics textbook, [exercises](/assets/cpexercises.zip) and [codes](/assets/cpresources.zip)
+Martin R. Zirnbauer (Univ. Cologne) <http://www.thp.uni-koeln.de/zirn/011_Website_Martin_Zirnbauer/3_Teaching/MZ_teaching.html> 
+
+Kam Tuen Law (HKUST) <https://phlaw.ust.hk/group-members> 
+
+Eduardo Fradkin (UIUC) <http://eduardo.physics.illinois.edu/homepage/> 
+
+Mona Berciu (Uni. of British Columbia) <https://phas.ubc.ca/~berciu/> 
+
+computational lab of Prof. Qiang Zhu (Uni. Nevada, Las vegas) <https://qzhu2017.github.io/courses/> 
+
+computational physics textbook, <http://www-personal.umich.edu/~mejn/cp/index.html>  [exercises](/assets/cpexercises.zip) and [codes](/assets/cpresources.zip)
 
 # 科研工具类
 
