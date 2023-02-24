@@ -142,6 +142,9 @@ computational lab of Prof. Qiang Zhu (Uni. Nevada, Las vegas) <https://qzhu2017.
 
 computational physics textbook, <http://www-personal.umich.edu/~mejn/cp/index.html>  [exercises](/assets/cpexercises.zip) and [codes](/assets/cpresources.zip)
 
+<https://muellergroup.lassp.cornell.edu/Basic_Training_Spring_2013/Overview.html>
+
+理论物理学习建议 Gerard 't Hooft:<https://webspace.science.uu.nl/~gadda001/goodtheorist/index.html> 一个类似的知乎帖子<https://zhuanlan.zhihu.com/p/63089060>
 # 科研工具类
 
 ## 计算软件
