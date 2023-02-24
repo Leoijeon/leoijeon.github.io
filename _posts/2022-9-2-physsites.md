@@ -204,6 +204,8 @@ The Academic Phrasebank is a general resource for academic writers. It makes exp
 <https://web.stanford.edu/class/me200c/tutorial_90/>
 
 ### 其他
+<http://www.physics.umd.edu/courses/CourseWare/EssentialMathematica/> Mathmatica 教程
+
 <https://www.runoob.com/> 很方便查询相关命令和语法（linux, python, html...）
 
 <https://github.com/Leoijeon/coding-interview-university/blob/main/translations/README-cn.md>  Code interview university
